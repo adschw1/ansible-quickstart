@@ -70,6 +70,14 @@ Data Types in YAML
 
 YAML supports sequences and scalars
 
+Scalar Syntax::
+
+    integer: 25
+    string: "25"
+    float: 25.0
+    boolean: Yes
+    null: ~
+
 Mapping scalars to scalars::
 
     name: Harry
@@ -89,9 +97,13 @@ Scalar of secquence of scalars::
     - University of Illinois
     - Northwestern University
 
-Specific Scalars::
+Nested lists::
 
-    null: ~
-    true: y
-    false: n
-    string: '12345'
+    -
+     - Cat
+     - Dog
+     - Goldfish
+    -
+     - Python
+     - Lion
+     - Tiger
