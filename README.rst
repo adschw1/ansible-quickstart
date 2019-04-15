@@ -19,7 +19,7 @@ Install using Pip
 
 This is probably the easiest way if you have pip installed on your machine.
 
-**Note: **using a virtualenv is ALWAYS recommended.
+**Note:** using a virtualenv is ALWAYS recommended.
 
 If you need to install pip:
 
@@ -61,3 +61,4 @@ Installing on Linux w/ repository
 Basic Syntax
 ============
 
+.. |YAML| file:: 
