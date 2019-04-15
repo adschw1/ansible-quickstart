@@ -12,7 +12,7 @@ Requirements
 ------------
 
 - ``Python 2.6`` or *higher*, ``Python 3.x`` is not currently supported.
-- If using Windows, ``VirtualBox`` with Ubuntu or CentOS
+- If using Windows, ``VirtualBox`` with Ubuntu, CentOS or Mininet
 
 Install using Pip
 -----------------
