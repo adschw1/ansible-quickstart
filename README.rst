@@ -55,3 +55,24 @@ Installing on Linux w/ repository
 
     #CentOS
     sudo yum install ansible
+
+Basic Syntax
+============
+
+If you already know basic YAML and Python syntax feel free to skip this section.
+
+YAML Basics
+-----------
+
+- YAML is case sensitive
+- The files should have **.yaml** as the extension
+- YAML does not allow the use of tabs while creating YAML files; spaces are allowed instead
+
+Block Format uses ``hypen`` + ``space`` to add new items to a list.
+
+.. code-block:: yaml
+
+    --- # Favorite TV shows
+    - Breaking Bad
+    - New Girl
+    - Game of Thrones
