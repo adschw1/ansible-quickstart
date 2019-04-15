@@ -21,12 +21,14 @@ This is probably the easiest way if you have pip installed on your machine.
 
 **Note: **using a virtualenv is ALWAYS recommended.
 
-If you need to install pip follow these instructions
+If you need to install pip:
 
 .. code-block:: bash
 
     curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
     python get-pip.py
+
+Once pip is installed:
 
 .. code-block:: bash
 
