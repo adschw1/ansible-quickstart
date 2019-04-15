@@ -23,14 +23,14 @@ This is probably the easiest way if you have pip installed on your machine.
 
 If you need to install pip:
 
-.. codeblock:: bash
+.. code-block:: bash
 
     curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
     python get-pip.py
 
 Once pip is installed:
 
-.. codeblock:: bash
+.. code-block:: bash
 
     #sudo if not in Virtualenv
     sudo pip install ansible
@@ -38,7 +38,7 @@ Once pip is installed:
 Installing on Mac w/ Homebrew
 -----------------------------
 
-.. codeblock:: bash
+.. code-block:: bash
 
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     brew update
@@ -47,7 +47,7 @@ Installing on Mac w/ Homebrew
 Installing on Linux w/ repository
 ---------------------------------
 
-.. codeblock:: bash
+.. code-block:: bash
 
     #Ubuntu
     sudo apt-get install software-properties-common
@@ -72,7 +72,7 @@ YAML Basics
 
 Block Format uses ``hypen`` + ``space`` to add new items to a list.
 
-.. codeblock:: yaml
+.. code-block:: yaml
 
     --- # Favorite TV shows
     - Breaking Bad
