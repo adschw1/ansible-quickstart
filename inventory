@@ -1,9 +1,9 @@
 # [all:vars]
-# un=admin
-# pwd=IT381
+un=cisco
+pwd=IT381
 
 [routers]
-R1
+R1 ansible_host=""
 R2
 R3
 

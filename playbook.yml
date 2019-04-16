@@ -1,14 +1,17 @@
 ---
 - name: configure routers
-  host: routers
-  gather_facts: no
+  hosts: routers
+  gather_facts: false
   connection: local
   tasks:
-    - name: configure router hostnames
+    - name: configure R1
       ios_config:
-        commands:
-          - 
-        host: "{{ inventory_hostname }}"
+        lines:
+          - hostname R1
+          - interface 
+
+
+    
 
     # - name: DEPLOY SNMP CONFIGURATIONS
     #   host: ios
