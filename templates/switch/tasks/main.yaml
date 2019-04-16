@@ -1,0 +1,5 @@
+---
+- name: Generate configuration files
+  # be sure to create a /etc/ansible/CONFIGS directory first
+  template: src=router.j2 dest=/etc/ansible/CONFIGS/{{item.hostname}}.txt
+  with_items: "{{ routers }}"
