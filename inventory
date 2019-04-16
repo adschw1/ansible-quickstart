@@ -1,6 +1,6 @@
-[all:vars]
-un=admin
-pwd=IT381
+# [all:vars]
+# un=admin
+# pwd=IT381
 
 [routers]
 R1
