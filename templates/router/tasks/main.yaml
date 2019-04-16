@@ -1,0 +1,5 @@
+---
+- name: Generate configuration files
+  # TODO: be sure to change the path to the configs folder
+  template: src=router.j2 dest=~/ansithon/configs/{{item.hostname}}.txt
+  with_items: "{{ routers }}"
