@@ -8,6 +8,16 @@
       ios_config:
         lines:
           - host R1
+    # - name: configure R1 interface e0/0
+    #   ios_config:
+    #     lines:
+    #       - router-id 10.10.10.10
+    #     parents: router ospf 100
+    # - name: configure R1 interface e0/0
+    #   ios_config:
+    #     lines:
+    #       - ip addr 192.168.1.10
+    #     parents: interface Ethernet0/0
     - name: configure R2
       ios_config:
         lines:
