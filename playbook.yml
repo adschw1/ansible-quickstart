@@ -16,7 +16,7 @@
       ios_config:
         lines:
           - host R3
-          
+
 - name: configure switches
   hosts: switches
   gather_facts: false
@@ -35,8 +35,8 @@
         lines:
           - host SW3
 
-- name: configure hosts
-  hosts: hosts
+- name: configure computers
+  hosts: computers
   gather_facts: false
   connection: local
   tasks:
