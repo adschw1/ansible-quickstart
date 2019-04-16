@@ -10,11 +10,6 @@
         - name: DEPLOY SNMP COMMANDS WITHIN COOKBOOK
           ios_config: 
             commands:
-                - snmp-server community public123 RO
-                - snmp-server community networkcode RO
-                - snmp-server community private123 RW
-                - snmp-server location NTC_HQ_NYC
-                - snmp-server contact EDWARD_SNOWDEN
             username: "{{ un }}"
             password: "{{ pwd }}"
             host: "{{ inventory_hostname }}"
