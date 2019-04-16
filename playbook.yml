@@ -7,19 +7,83 @@
     - name: configure R1
       ios_config:
         lines:
-          - hostname R1
-          - interface 
+          - host R1
+    - name: configure R2
+      ios_config:
+        lines:
+          - host R2
+    - name: configure R3
+      ios_config:
+        lines:
+          - host R3
+          
+- name: configure switches
+  hosts: switches
+  gather_facts: false
+  connection: local
+  tasks:
+    - name: configure SW1
+      ios_config:
+        lines:
+          - host SW1
+    - name: configure SW2
+      ios_config:
+        lines:
+          - host Sw2
+    - name: configure SW3
+      ios_config:
+        lines:
+          - host SW3
+
+- name: configure hosts
+  hosts: hosts
+  gather_facts: false
+  connection: local
+  tasks:
+    - name: configure PC1
+      ios_config:
+        lines:
+          - host PC1
+    - name: configure PC2
+      ios_config:
+        lines:
+          - host PC2
+    - name: configure PC3
+      ios_config:
+        lines:
+          - host PC3
+    - name: configure PC4
+      ios_config:
+        lines:
+          - host PC4
+    - name: configure PC5
+      ios_config:
+        lines:
+          - host PC5
+    - name: configure PC6
+      ios_config:
+        lines:
+          - host PC6
+    - name: configure PC7
+      ios_config:
+        lines:
+          - host PC7
+    - name: configure PC8
+      ios_config:
+        lines:
+          - host PC8
+    - name: configure PC9
+      ios_config:
+        lines:
+          - host PC9
+    - name: configure PC10
+      ios_config:
+        lines:
+          - host PC10
 
 
-    
-
-    # - name: DEPLOY SNMP CONFIGURATIONS
-    #   host: ios
-    #   gather_facts: no
-    #   connection: local
 
     #   tasks:
-        
     #     - name: DEPLOY SNMP COMMANDS WITHIN COOKBOOK
     #       ios_config: 
     #         commands:
