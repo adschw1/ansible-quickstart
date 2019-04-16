@@ -171,3 +171,14 @@ Nested lists::
      - Python
      - Lion
      - Tiger
+
+Building your Inventory File
+============================
+
+Create a ``txt`` file named ``inventory``, this can be accomplished many different ways::
+
+    touch inventory
+    vim inventory
+    echo "" > inventory
+    
+This file holds
