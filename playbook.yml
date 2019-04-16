@@ -1,0 +1,26 @@
+---
+- name: configure routers
+  host: routers
+  gather_facts: no
+  connection: local
+  tasks:
+    - name: configure router hostnames
+      ios_config:
+        commands:
+          - 
+        host: "{{ inventory_hostname }}"
+
+    # - name: DEPLOY SNMP CONFIGURATIONS
+    #   host: ios
+    #   gather_facts: no
+    #   connection: local
+
+    #   tasks:
+        
+    #     - name: DEPLOY SNMP COMMANDS WITHIN COOKBOOK
+    #       ios_config: 
+    #         commands:
+    #         username: "{{ un }}"
+    #         password: "{{ pwd }}"
+    #         host: "{{ inventory_hostname }}"
+
