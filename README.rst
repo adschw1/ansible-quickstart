@@ -172,8 +172,8 @@ Nested lists::
      - Lion
      - Tiger
 
-Building your Inventory File
-============================
+Building your Inventory
+=======================
 
 Create a ``txt`` file named ``inventory``, this can be accomplished many different ways::
 
@@ -181,4 +181,19 @@ Create a ``txt`` file named ``inventory``, this can be accomplished many differe
     vim inventory
     echo "" > inventory
     
-This file holds
+This file holds a list of devices and can be specified by using ``-i inventory``
+
+Example:
+
+.. code-block:: ini
+
+    [routers]
+    R1 ansible_host=192.168.1.10 ansible_port=22
+    R2 ansible_host=192.168.1.20 ansible_port=2020
+    [router:vars]
+    user=cisco
+    passwd=admin
+
+
+Building your Playbook
+=====================
