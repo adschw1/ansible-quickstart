@@ -7,31 +7,22 @@
         msg: '{{ansible_host}} {{ansible_port}}'
     - name: Setup domain information
       shell: |
-        set timeout 5
+        set timeout 7
         # log_file {{ '~/logs/your_log_file.explog' }}
 
         spawn telnet {{ansible_host}} {{ansible_port}}
 
         expect "Escape character is '^]'."
         send "\n"
-        sleep .5
 
-        # expect "# "
-        # send "term length 0"
-        # send "^C"
+        expect "Router>"
+        send "\nterm length 0"
 
-        expect "# "
-        send "\n en"
+        expect "Router>"
+        send "\nen"
 
-        expect "# "        
-        send "conf t"
-        send "^C"
-        sleep .5
-        
-        send "hostname {{ inventory_hostname }}"
-        send "^C"
-        sleep .5
-        
+        expect "Router#"        
+        send "\nconf t\nhost {{inventory_hostname}}\nend\nwr"      
 
       args:
         executable: /usr/bin/expect
