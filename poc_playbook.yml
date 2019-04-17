@@ -11,18 +11,19 @@
         # log_file {{ '~/logs/your_log_file.explog' }}
 
         spawn telnet {{ansible_host}} {{ansible_port}}
+
+        expect "Escape character is '^]'."
+        send "\n"
         sleep .5
-        send "^C"
+
+        # expect "# "
+        # send "term length 0"
+        # send "^C"
 
         expect "# "
-        send "term length 0"
-        send "^C"
+        send "\n en"
 
-        expect "# "
-        send "en"
-        send "^C"
-        sleep .5
-        
+        expect "# "        
         send "conf t"
         send "^C"
         sleep .5
