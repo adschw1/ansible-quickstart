@@ -177,13 +177,14 @@ Building your Inventory
 
 Create a ``txt`` file named ``inventory``, this can be accomplished many different ways::
 
-    touch inventory
-    vim inventory
-    echo "" > inventory
+    touch inventory.ini
+    vim inventory.yaml
+    echo "" > inventory.etc
     
 This file holds a list of devices and can be specified by using ``-i inventory``
+There are many differnet types, find a inventory format that suits you.
 
-Example:
+Example of ``.ini` inventory:
 
 .. code-block:: ini
 

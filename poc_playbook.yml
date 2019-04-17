@@ -1,14 +1,52 @@
 ---
-- name: configure routers
+- name: run show commands
   hosts: routers
-  gather_facts: false
-  connection: local
+  gather_facts: False
   tasks:
-    - name: configure R1
-      ios_config:
-        lines:
-          - host R1
-    - name: configure R2
-      ios_config:
-        lines:
-          - host R2
+    - debug:
+        msg: '{{ansible_host}} {{ansible_port}}'
+    - name: Setup domain information
+      shell: |
+        set timeout 5
+        # log_file {{ '~/logs/your_log_file.explog' }}
+
+        spawn telnet {{ansible_host}} {{ansible_port}}
+        sleep .5
+        send "^C"
+
+        expect "# "
+        send "term length 0"
+        send "^C"
+
+        expect "# "
+        send "en"
+        send "^C"
+        sleep .5
+        
+        send "conf t"
+        send "^C"
+        sleep .5
+        
+        send "hostname {{ inventory_hostname }}"
+        send "^C"
+        sleep .5
+        
+
+      args:
+        executable: /usr/bin/expect
+      changed_when: yes
+      delegate_to: localhost
+
+      
+      # telnet:
+      #   port: '{{ansible_port}}'
+      #   prompts:
+      #     - "[>|#]"
+      #   command:
+      #     - term length 0
+      #     - enable
+      #     - show version
+      #     - configure terminal
+      #     - hostname PLEASE
+      #     - end
+      #     - write memory
