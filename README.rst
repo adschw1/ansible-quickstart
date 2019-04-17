@@ -188,9 +188,9 @@ Example:
 .. code-block:: ini
 
     [routers]
-    R1 ansible_host=192.168.1.10 ansible_port=22
-    R2 ansible_host=192.168.1.20 ansible_port=2020
-    [router:vars]
+    R1 ansible_host=192.168.1.10 ansible_port=2001
+    R2 ansible_host=192.168.1.20 ansible_port=2002
+    [routers:vars]
     user=cisco
     passwd=admin
 
