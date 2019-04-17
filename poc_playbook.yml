@@ -1,0 +1,14 @@
+---
+- name: configure routers
+  hosts: routers
+  gather_facts: false
+  connection: local
+  tasks:
+    - name: configure R1
+      ios_config:
+        lines:
+          - host R1
+    - name: configure R2
+      ios_config:
+        lines:
+          - host R2
