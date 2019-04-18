@@ -172,8 +172,14 @@ Nested lists::
      - Lion
      - Tiger
 
+Configuring Cisco Devices in Ansible
+====================================
+
+The sections below will help you get started configuring your Cisco IOS devices.
+
+
 Building your Inventory
-=======================
+-----------------------
 
 Create a ``txt`` file named ``inventory``, this can be accomplished many different ways::
 
@@ -211,9 +217,11 @@ Example of a ``.yml`` or ``.yaml`` inventory:
 
 
 Building your Playbook (in a perfect world)
-===========================================
+-------------------------------------------
 
-Wouldn't it be great if things just worked? Well, Ansible is one of those tools that is very easy to understand and use, but things aren't always perfect in the real world.
+Wouldn't it be great if things just worked? 
+
+Well, Ansible is one of those tools that is very easy to understand and use, but things aren't always perfect in the real world.
 
 Ansible assumes you are able to ssh into your devices, most of your configurations will be done through ssh.
 
@@ -239,6 +247,9 @@ Below is an example of how one may configure a Cisco device through Ansible:
                 parents: interface Ethernet0
 
 
+Building your Playbook (in a semi perfect world)
+------------------------------------------------
+
 Even if you don't have access to ssh you still have Telnet as a backup, right? Well I couldn't get the Telnet module to work very well.
 
 Below is an example of how one may configure a Cisco device through Telnet:
@@ -261,3 +272,44 @@ Below is an example of how one may configure a Cisco device through Telnet:
         - hostname {{ inventory_hostname }}
         - end
         - write memory
+
+Building your Playbook (the not fun way)
+----------------------------------------
+
+So you tried the other ways and it didn't work, you must be using emulated devices. When all else fails, it's time to get our hands dirty and do things the hard way. Ansible can do just about anything you tell it to, even imitating you using a shell to create a Telent session.
+
+Example of using a bash shell and expect script to create a Telnet session into routers:
+
+.. code-block:: yaml
+
+    ---
+    - name: Configure Cisco IOU
+    hosts: routers
+    gather_facts: False
+    tasks:
+        - debug:
+            msg: '{{ansible_host}} {{ansible_port}}'
+        - name: Configure Devices
+        shell: |
+            set timeout 120
+            spawn telnet {{ansible_host}} {{ansible_port}}
+
+            expect "Escape character is '^]'."
+            send "\n"        
+            spawn telnet {{ansible_host}} {{ansible_port}}
+
+            expect "Router>"
+            send "\nterm length 0"
+
+            expect "Router>"
+            send "\nen"
+
+            expect "Router#"        
+            send "\nconf t\nhost {{inventory_hostname}}\nend\nwr"      
+
+        args:
+            executable: /usr/bin/expect
+        changed_when: yes
+        delegate_to: localhost
+
+Now right away you may notice this doesn't look very pratical, and you would be right, but who in their right mind would ever configure emulated devices through Ansible anyways?
