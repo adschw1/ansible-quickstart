@@ -90,14 +90,3 @@
       ios_config:
         lines:
           - host PC10
-
-
-
-    #   tasks:
-    #     - name: DEPLOY SNMP COMMANDS WITHIN COOKBOOK
-    #       ios_config: 
-    #         commands:
-    #         username: "{{ un }}"
-    #         password: "{{ pwd }}"
-    #         host: "{{ inventory_hostname }}"
-

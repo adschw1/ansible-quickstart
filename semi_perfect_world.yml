@@ -1,0 +1,15 @@
+---
+- name: Configure Routers through Telnet  
+  telnet:
+    host: {{ ansible_host }}
+    port: {{ ansible_port }}
+    prompts:
+    - "[>|#]"
+    command:
+    - term length 0
+    - enable     
+    - show version
+    - configure terminal
+    - hostname {{ inventory_hostname }}
+    - end
+    - write memory

@@ -1,19 +1,30 @@
 ---
-- name: run show commands
+- name: Configure Cisco IOU
   hosts: routers
   gather_facts: False
   tasks:
     - debug:
         msg: '{{ansible_host}} {{ansible_port}}'
-    - name: Setup domain information
+    - name: Get past stupid prompts
       shell: |
-        set timeout 7
-        # log_file {{ '~/logs/your_log_file.explog' }}
-
+        set timeout 60
         spawn telnet {{ansible_host}} {{ansible_port}}
 
         expect "Escape character is '^]'."
         send "\n"
+
+        # send "\n\n\n"
+        # sleep 60
+        # send "no"
+        # send "\n\n\n"
+        # sleep 30
+        # send "\n"
+
+    - name: Configure Devices
+      shell: |
+        set timeout 5
+        
+        spawn telnet {{ansible_host}} {{ansible_port}}
 
         expect "Router>"
         send "\nterm length 0"
@@ -29,7 +40,9 @@
       changed_when: yes
       delegate_to: localhost
 
-      
+
+
+      # log_file {{ '~/logs/your_log_file.explog' }}
       # telnet:
       #   port: '{{ansible_port}}'
       #   prompts:
