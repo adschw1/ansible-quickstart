@@ -284,13 +284,13 @@ Example of using a bash shell and expect script to create a Telnet session into 
 
     ---
     - name: Configure Cisco IOU
-    hosts: routers
-    gather_facts: False
-    tasks:
+      hosts: routers
+      gather_facts: False
+      tasks:
         - debug:
             msg: '{{ansible_host}} {{ansible_port}}'
         - name: Configure Devices
-        shell: |
+          shell: |
             set timeout 120
             spawn telnet {{ansible_host}} {{ansible_port}}
 
@@ -307,9 +307,9 @@ Example of using a bash shell and expect script to create a Telnet session into 
             expect "Router#"        
             send "\nconf t\nhost {{inventory_hostname}}\nend\nwr"      
 
-        args:
+          args:
             executable: /usr/bin/expect
-        changed_when: yes
-        delegate_to: localhost
+          changed_when: yes
+          delegate_to: localhost
 
 Now right away you may notice this doesn't look very pratical, and you would be right, but who in their right mind would ever configure emulated devices through Ansible anyways?
