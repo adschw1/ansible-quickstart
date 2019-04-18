@@ -185,10 +185,10 @@ Create a ``txt`` file named ``inventory``, this can be accomplished many differe
 
     touch inventory.ini
     vim inventory.yaml
-    echo "" > inventory.etc
+    echo "" > inventory.yml
     
 This file holds a list of devices and can be specified by using ``-i inventory``
-There are many differnet types, find a inventory format that suits you.
+There are many differnet types, find a inventory format that suits you. You don't really need to worry about indenting with ``.ini`` files, I would recommend starting with those.
 
 Example of a ``.ini` inventory:
 
@@ -206,11 +206,11 @@ Example of a ``.yml`` or ``.yaml`` inventory:
 .. code-block:: yaml
 
     routers:
-        hosts:
-            R1:  
+      hosts:
+          R1:  
             ansible_host: 10.110.20.94    
             ansible_port: 2001
-            R2:  
+          R2:  
             ansible_host: 10.110.20.94    
             ansible_port: 2002
 
@@ -232,19 +232,19 @@ Below is an example of how one may configure a Cisco device through Ansible:
     # perfet_world.yml
     ---
     - name: Configure My Routers
-        hosts: routers
-        gather_facts: false
-        connection: local
-        tasks:
-            - name: Configure Router Names
-            ios_config:
-                lines:
-                - host {{ inventory_hostname }}
-            - name: Configure Router Interfaces
-            ios_config:
-                lines:
-                - ip address {{ ip_address }} {{ subnet_mask}}
-                parents: interface Ethernet0
+      hosts: routers
+      gather_facts: false
+      connection: local
+      tasks:
+        - name: Configure Router Names
+          ios_config:
+            lines:
+              - host {{ inventory_hostname }}
+        - name: Configure Router Interfaces
+          ios_config:
+            lines:
+              - ip address {{ ip_address }} {{ subnet_mask}}
+            parents: interface Ethernet0
 
 
 Building your Playbook (in a semi perfect world)
