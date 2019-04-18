@@ -184,7 +184,7 @@ Create a ``txt`` file named ``inventory``, this can be accomplished many differe
 This file holds a list of devices and can be specified by using ``-i inventory``
 There are many differnet types, find a inventory format that suits you.
 
-Example of ``.ini` inventory:
+Example of a ``.ini` inventory:
 
 .. code-block:: ini
 
@@ -195,6 +195,20 @@ Example of ``.ini` inventory:
     user=cisco
     passwd=admin
 
+Example of a ``.yml`` or ``.yaml`` inventory:
+
+.. code-block:: yaml
+
+    routers:
+        hosts:
+            R1:  
+            ansible_host: 10.110.20.94    
+            ansible_port: 2001
+            R2:  
+            ansible_host: 10.110.20.94    
+            ansible_port: 2002
+
+
 
 Building your Playbook (in a perfect world)
 ===========================================
@@ -203,24 +217,26 @@ Wouldn't it be great if things just worked? Well, Ansible is one of those tools 
 
 Ansible assumes you are able to ssh into your devices, most of your configurations will be done through ssh.
 
-Below is an example of how one may configure a Cisco device through Ansible::
+Below is an example of how one may configure a Cisco device through Ansible:
+
+.. code-block:: yaml
 
     # perfet_world.yml
     ---
     - name: Configure My Routers
-    hosts: routers
-    gather_facts: false
-    connection: local
-    tasks:
-        - name: Configure Router Names
-        ios_config:
-            lines:
-            - host {{ inventory_hostname }}
-        - name: Configure Router Interfaces
-        ios_config:
-            lines:
-            - ip address {{ ip_address }} {{ subnet_mask}}
-            parents: interface Ethernet0
+        hosts: routers
+        gather_facts: false
+        connection: local
+        tasks:
+            - name: Configure Router Names
+            ios_config:
+                lines:
+                - host {{ inventory_hostname }}
+            - name: Configure Router Interfaces
+            ios_config:
+                lines:
+                - ip address {{ ip_address }} {{ subnet_mask}}
+                parents: interface Ethernet0
 
 
 Even if you don't have access to ssh you still have Telnet as a backup, right? Well I couldn't get the Telnet module to work very well.
@@ -233,15 +249,15 @@ Below is an example of how one may configure a Cisco device through Telnet:
     ---
     - name: Configure Routers through Telnet  
       telnet:
-         host: {{ ansible_host }}
-         port: {{ ansible_port }}
-         prompts:
-         - "[>|#]"
-         command:
-         - term length 0
-         - enable     
-         - show version
-         - configure terminal
-         - hostname {{ inventory_hostname }}
-         - end
-         - write memory
+        host: {{ ansible_host }}
+        port: {{ ansible_port }}
+        prompts:
+        - "[>|#]"
+        command:
+        - term length 0
+        - enable     
+        - show version
+        - configure terminal
+        - hostname {{ inventory_hostname }}
+        - end
+        - write memory
