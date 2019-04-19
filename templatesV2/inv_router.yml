@@ -1,0 +1,21 @@
+# this is where you put variables for the jinja file
+router:
+  hosts:
+    R1:
+      hostname: R1
+      secret: cisco1
+      loopback: 1.1.1.1 255.255.255.255
+    R2:
+      hostname: R2
+      secret: cisco2
+      loopback: 2.2.2.2 255.255.255.255
+    R3:
+      hostname: R3
+      ecret: cisco3
+      loopback: 3.3.3.3 255.255.255.255
+      
+baselines:
+  router: router.j2
+ 
+global:
+    hostname: "{{ inventory_hostname }}"

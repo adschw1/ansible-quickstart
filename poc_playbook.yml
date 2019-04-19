@@ -30,25 +30,26 @@
 
     - name: Configure Devices
       shell: |
-        set timeout 60
+        set timeout 5
         
         spawn telnet {{ansible_host}} {{ansible_port}}
 
         expect "Escape character is '^]'."
         send "\n\n\n"
 
-        expect "% Please answer 'yes' or 'no'."
-        send "no\n\n"
+        # expect "% Please answer 'yes' or 'no'."
+        # send "no\n\n"
 
-        sleep 5
-        expect "Press RETURN to get started!"
-        send "\n\n\n"
-        sleep 15
+        # sleep 5
+        # expect "Press RETURN to get started!"
+        # send "\n\n\n"
+        # sleep 15
     
         expect "Router>"
         send "\n term length 0 \n en \n conf t \n host {{inventory_hostname}} \n end \n wr"
-
+        
       args:
         executable: /usr/bin/expect
       changed_when: yes
       delegate_to: localhost
+
