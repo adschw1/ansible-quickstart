@@ -313,3 +313,22 @@ Example of using a bash shell and expect script to create a Telnet session into 
           delegate_to: localhost
 
 Now right away you may notice this doesn't look very pratical, and you would be right, but who in their right mind would ever configure emulated devices through Ansible anyways?
+
+Generate Config Files through Templates
+=======================================
+
+File Structure::
+
+  templates
+  ├── roles
+  │   ├── router
+  │   │   ├── main.yaml
+  │   │   ├── tasks
+  │   │   │   └── main.yaml
+  │   │   ├── templates
+  │   │   │   └── router.j2
+  │   │   └── vars
+  │   │       └── main.yaml
+  │   ├── computer
+  │   └── switch
+  └── site.yaml
