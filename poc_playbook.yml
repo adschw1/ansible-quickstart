@@ -5,53 +5,50 @@
   tasks:
     - debug:
         msg: '{{ansible_host}} {{ansible_port}}'
-    - name: Get past stupid prompts
-      shell: |
-        set timeout 60
-        spawn telnet {{ansible_host}} {{ansible_port}}
+    # - name: Get Past Prompts
+    #   shell: |
+    #     set timeout 90
+    #     spawn telnet {{ansible_host}} {{ansible_port}}
 
-        expect "Escape character is '^]'."
-        send "\n"
+    #     expect "Escape character is '^]'."
+    #     send "\n"
 
-        # send "\n\n\n"
-        # sleep 60
-        # send "no"
-        # send "\n\n\n"
-        # sleep 30
-        # send "\n"
+    #     expect ""
+    #     send "\n\n\n"
+    #     sleep 30
+    #     expect """
+    #     send "no\n"
+    #     expect ""
+    #     send "\n\n\n"
+    #     sleep 30
+    #     expect ""
+    #     send "\n"
+    #   args:
+    #     executable: /usr/bin/expect
+    #   changed_when: yes
+    #   delegate_to: localhost
 
     - name: Configure Devices
       shell: |
-        set timeout 5
+        set timeout 60
         
         spawn telnet {{ansible_host}} {{ansible_port}}
 
-        expect "Router>"
-        send "\nterm length 0"
+        expect "Escape character is '^]'."
+        send "\n\n\n"
 
-        expect "Router>"
-        send "\nen"
+        expect "% Please answer 'yes' or 'no'."
+        send "no\n\n"
 
-        expect "Router#"        
-        send "\nconf t\nhost {{inventory_hostname}}\nend\nwr"      
+        sleep 5
+        expect "Press RETURN to get started!"
+        send "\n\n\n"
+        sleep 15
+    
+        expect "Router>"
+        send "\n term length 0 \n en \n conf t \n host {{inventory_hostname}} \n end \n wr"
 
       args:
         executable: /usr/bin/expect
       changed_when: yes
       delegate_to: localhost
-
-
-
-      # log_file {{ '~/logs/your_log_file.explog' }}
-      # telnet:
-      #   port: '{{ansible_port}}'
-      #   prompts:
-      #     - "[>|#]"
-      #   command:
-      #     - term length 0
-      #     - enable
-      #     - show version
-      #     - configure terminal
-      #     - hostname PLEASE
-      #     - end
-      #     - write memory

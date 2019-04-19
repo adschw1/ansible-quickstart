@@ -1,12 +1,15 @@
 ---
 - name: Configure Routers through Telnet  
+  hosts: routers
+  gather_facts: False
   telnet:
-    host: {{ ansible_host }}
-    port: {{ ansible_port }}
+    host: "{{ ansible_host }}"
+    port: "{{ ansible_port }}"
+    login_prompt: ">"
+    user: "term length 0"
     prompts:
     - "[>|#]"
     command:
-    - term length 0
     - enable     
     - show version
     - configure terminal
