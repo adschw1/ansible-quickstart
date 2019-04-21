@@ -1,6 +1,6 @@
 # this is where you put variables for the jinja file
 ---
-router:
+routers:
   - hostname: R1
     secret: cisco1
     loopback: 1.1.1.1 255.255.255.255

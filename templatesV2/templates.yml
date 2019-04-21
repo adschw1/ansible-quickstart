@@ -1,9 +1,0 @@
----
-- name: Generate Configs
-  hosts: router
-  connection: local
-  gather_facts: no
-
-  tasks:
-    - name: Create Template
-      template: src=~/ansithon/templatesV2/{{ baselines.router}} dest=~/ansithon/configs/{{ inventory_hostname }}.cfg

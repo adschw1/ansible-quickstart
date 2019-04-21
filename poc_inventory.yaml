@@ -4,9 +4,9 @@ r1_r3:
       ansible_host: 10.110.20.94    
       ansible_port: 2001
       eth0: "int Ethernet0/0"
-      eth0_ip: "10.1.1.1 255.0.0.0"
+      eth0_ip: "ip addr 10.1.1.1 255.0.0.0"
       eth1: "int Ethernet1/0"
-      eth1_ip: "1.1.1.1 255.0.0.0"
+      eth1_ip: "ip addr 1.1.1.1 255.0.0.0"
       ospf: "\nNetwork 1.1.1.1 0.0.0.0 area 0 \nNetwork 10.0.0.0 0.255.255.255 area 0\n"
     R3:  
       ansible_host: 10.110.20.94    
@@ -27,25 +27,25 @@ r2:
       eth1_ip: "ip addr 1.1.1.2 255.0.0.0"
       eth11: "int Ethernet1/1"
       eth11_ip: "ip addr 2.2.2.1 255.0.0.0"
-      ospf: "\nNetwork1.1.1.2 0.0.0.0 area 0 \nNetwork 2.2.2.1 0.0.0.0 area 0 \nNetwork 20.0.0.0 0.255.255.255 area 0\n"
+      ospf: "\nNetwork 1.1.1.2 0.0.0.0 area 0 \nNetwork 2.2.2.1 0.0.0.0 area 0 \nNetwork 20.0.0.0 0.255.255.255 area 0\n"
 pcs:
   hosts:
     PC1:
       ansible_host: 10.110.20.94    
       ansible_port: 2004
       eth0: "int Ethernet0/0"
-      eth0_ip: "ip addr10.1.1.2 255.0.0.0"
+      eth0_ip: "ip addr 10.1.1.2 255.0.0.0"
       gate: "ip default-gateway 10.1.1.1"
     PC2:  
       ansible_host: 10.110.20.94    
       ansible_port: 2005
       eth0: "int Ethernet0/0"
-      eth0_ip: "ip addr20.1.1.2 255.0.0.0"
+      eth0_ip: "ip addr 20.1.1.2 255.0.0.0"
       gate: "ip default-gateway 20.1.1.1"
 
     PC3:  
       ansible_host: 10.110.20.94    
       ansible_port: 2006
       eth0: "int Ethernet0/0"
-      eth0_ip: "ip addr30.1.1.2 255.0.0.0"
+      eth0_ip: "ip addr 30.1.1.2 255.0.0.0"
       gate: "ip default-gateway 30.1.1.1"

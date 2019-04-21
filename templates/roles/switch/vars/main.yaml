@@ -1,0 +1,12 @@
+# this is where you put variables for the jinja file
+---
+switches:
+  - hostname: SW1
+    secret: cisco1
+    vlan: vlan 1
+  - hostname: SW2
+    secret: cisco2
+    vlan: vlan 2
+  - hostname: SW3
+    secret: cisco3
+    vlan: vlan 3 

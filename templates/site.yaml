@@ -2,8 +2,7 @@
 - name: Generate All Configuration Files
   hosts: localhost
   gather_facts: false
-
   roles:
     - router
-    # - switch
-    # - computer
+    - switch
+    - computer

@@ -1,0 +1,54 @@
+version 15.1
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname {{item.hostname}}
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable password {{item.secret}}
+!
+no aaa new-model
+clock timezone CET 1 0
+no ipv6 cef
+ipv6 multicast rpf use-bgp
+vtp mode transparent
+!
+no ip domain-lookup
+ip cef
+!
+{{item.vlan}}
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+!
+!
+!
+interface Ethernet0/0
+ duplex auto
+!
+!
+!
+no ip http server
+!
+!
+!
+!
+!
+control-plane
+!
+!
+line con 0
+ exec-timeout 0 0
+ logging synchronous
+line aux 0
+line vty 0 4
+ login
+!
+end
