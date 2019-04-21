@@ -1,18 +1,30 @@
 ---
 - name: Configure Routers through Telnet  
   hosts: routers
-  gather_facts: False
-  telnet:
-    host: "{{ ansible_host }}"
-    port: "{{ ansible_port }}"
-    login_prompt: ">"
-    user: "term length 0"
-    prompts:
-    - "[>|#]"
-    command:
-    - enable     
-    - show version
-    - configure terminal
-    - hostname {{ inventory_hostname }}
-    - end
-    - write memory
+  gather_facts: no
+  tasks:
+    - debug:
+        msg: "Trying: {{ansible_host}} {{ansible_port}}"
+    # - name: Bypass Prompts
+    #   telnet:
+    #     host: "{{ ansible_host }}"
+    #     port: "2002"
+    #     login_prompt: "Would you like to enter initial configuration dialog? [yes/no]:"
+    #     user: "no"
+    #     command:
+    #     - term length 0
+        
+    - name: Configure Router
+      telnet:
+        # host: "{{ ansible_host }}"
+        # port: "{{ ansible_port }}"
+        login_prompt: ">"
+        user: "term length 0"
+        prompts:
+        - "[>|#]"
+        command:
+        - enable     
+        - show version
+        - conf t
+        - hostname {{ inventory_hostname }}
+

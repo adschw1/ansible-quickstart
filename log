@@ -1,0 +1,98 @@
+2019-04-20 22:14:40,812 p=75617 u=Spudly |  ansible-playbook 2.7.10
+  config file = /Users/Spudly/playground/ansithon/ansible.cfg
+  configured module search path = ['/Users/Spudly/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/Cellar/ansible/2.7.10/libexec/lib/python3.7/site-packages/ansible
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 3.7.3 (default, Mar 27 2019, 09:23:39) [Clang 10.0.0 (clang-1000.11.45.5)]
+2019-04-20 22:14:40,812 p=75617 u=Spudly |  Using /Users/Spudly/playground/ansithon/ansible.cfg as config file
+2019-04-20 22:14:40,823 p=75617 u=Spudly |  /Users/Spudly/playground/ansithon/poc_inventory.yaml did not meet host_list requirements, check plugin documentation if this is unexpected
+2019-04-20 22:14:40,824 p=75617 u=Spudly |  /Users/Spudly/playground/ansithon/poc_inventory.yaml did not meet script requirements, check plugin documentation if this is unexpected
+2019-04-20 22:14:40,826 p=75617 u=Spudly |  Parsed /Users/Spudly/playground/ansithon/poc_inventory.yaml inventory source with yaml plugin
+2019-04-20 22:14:41,114 p=75617 u=Spudly |  PLAYBOOK: semi_perfect_world.yml ***************************************************************************************************************
+2019-04-20 22:14:41,114 p=75617 u=Spudly |  1 plays in semi_perfect_world.yml
+2019-04-20 22:14:41,150 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-20 22:14:41,155 p=75617 u=Spudly |  PLAY [Configure Routers through Telnet] ********************************************************************************************************
+2019-04-20 22:14:41,165 p=75617 u=Spudly |  TASK [Gathering Facts] *************************************************************************************************************************
+2019-04-20 22:14:41,165 p=75617 u=Spudly |  task path: /Users/Spudly/playground/ansithon/semi_perfect_world.yml:2
+2019-04-20 22:14:51,259 p=75617 u=Spudly |  fatal: [R1]: UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: Connection timed out during banner exchange",
+    "unreachable": true
+}
+2019-04-20 22:14:51,261 p=75617 u=Spudly |  	to retry, use: --limit @/Users/Spudly/playground/ansithon/semi_perfect_world.retry
+
+2019-04-20 22:14:51,261 p=75617 u=Spudly |  PLAY RECAP *************************************************************************************************************************************
+2019-04-20 22:14:51,262 p=75617 u=Spudly |  R1                         : ok=0    changed=0    unreachable=1    failed=0   
+2019-04-20 22:15:25,175 p=75730 u=Spudly |  ansible-playbook 2.7.10
+  config file = /Users/Spudly/playground/ansithon/ansible.cfg
+  configured module search path = ['/Users/Spudly/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/Cellar/ansible/2.7.10/libexec/lib/python3.7/site-packages/ansible
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 3.7.3 (default, Mar 27 2019, 09:23:39) [Clang 10.0.0 (clang-1000.11.45.5)]
+2019-04-20 22:15:25,175 p=75730 u=Spudly |  Using /Users/Spudly/playground/ansithon/ansible.cfg as config file
+2019-04-20 22:15:25,187 p=75730 u=Spudly |  /Users/Spudly/playground/ansithon/poc_inventory.yaml did not meet host_list requirements, check plugin documentation if this is unexpected
+2019-04-20 22:15:25,189 p=75730 u=Spudly |  /Users/Spudly/playground/ansithon/poc_inventory.yaml did not meet script requirements, check plugin documentation if this is unexpected
+2019-04-20 22:15:25,193 p=75730 u=Spudly |  Parsed /Users/Spudly/playground/ansithon/poc_inventory.yaml inventory source with yaml plugin
+2019-04-20 22:15:25,493 p=75730 u=Spudly |  PLAYBOOK: semi_perfect_world.yml ***************************************************************************************************************
+2019-04-20 22:15:25,494 p=75730 u=Spudly |  1 plays in semi_perfect_world.yml
+2019-04-20 22:15:25,532 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-20 22:15:25,537 p=75730 u=Spudly |  PLAY [Configure Routers through Telnet] ********************************************************************************************************
+2019-04-20 22:15:25,548 p=75730 u=Spudly |  TASK [Gathering Facts] *************************************************************************************************************************
+2019-04-20 22:15:25,548 p=75730 u=Spudly |  task path: /Users/Spudly/playground/ansithon/semi_perfect_world.yml:2
+2019-04-20 22:15:35,653 p=75730 u=Spudly |  fatal: [R1]: UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: Connection timed out during banner exchange",
+    "unreachable": true
+}
+2019-04-20 22:15:35,659 p=75730 u=Spudly |  	to retry, use: --limit @/Users/Spudly/playground/ansithon/semi_perfect_world.retry
+
+2019-04-20 22:15:35,659 p=75730 u=Spudly |  PLAY RECAP *************************************************************************************************************************************
+2019-04-20 22:15:35,660 p=75730 u=Spudly |  R1                         : ok=0    changed=0    unreachable=1    failed=0   
+2019-04-20 22:16:07,650 p=75834 u=Spudly |  ansible-playbook 2.7.10
+  config file = /Users/Spudly/playground/ansithon/ansible.cfg
+  configured module search path = ['/Users/Spudly/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/Cellar/ansible/2.7.10/libexec/lib/python3.7/site-packages/ansible
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 3.7.3 (default, Mar 27 2019, 09:23:39) [Clang 10.0.0 (clang-1000.11.45.5)]
+2019-04-20 22:16:07,650 p=75834 u=Spudly |  Using /Users/Spudly/playground/ansithon/ansible.cfg as config file
+2019-04-20 22:16:07,662 p=75834 u=Spudly |  /Users/Spudly/playground/ansithon/poc_inventory.yaml did not meet host_list requirements, check plugin documentation if this is unexpected
+2019-04-20 22:16:07,664 p=75834 u=Spudly |  /Users/Spudly/playground/ansithon/poc_inventory.yaml did not meet script requirements, check plugin documentation if this is unexpected
+2019-04-20 22:16:07,667 p=75834 u=Spudly |  Parsed /Users/Spudly/playground/ansithon/poc_inventory.yaml inventory source with yaml plugin
+2019-04-20 22:16:07,956 p=75834 u=Spudly |  PLAYBOOK: semi_perfect_world.yml ***************************************************************************************************************
+2019-04-20 22:16:07,956 p=75834 u=Spudly |  1 plays in semi_perfect_world.yml
+2019-04-20 22:16:07,995 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-20 22:16:08,000 p=75834 u=Spudly |  PLAY [Configure Routers through Telnet] ********************************************************************************************************
+2019-04-20 22:16:08,002 p=75834 u=Spudly |  META: ran handlers
+2019-04-20 22:16:08,010 p=75834 u=Spudly |  TASK [debug] ***********************************************************************************************************************************
+2019-04-20 22:16:08,011 p=75834 u=Spudly |  task path: /Users/Spudly/playground/ansithon/semi_perfect_world.yml:6
+2019-04-20 22:16:08,064 p=75834 u=Spudly |  ok: [R1] => {
+    "msg": "Trying: 10.110.20.94 2001"
+}
+2019-04-20 22:16:08,072 p=75834 u=Spudly |  TASK [Configure Router] ************************************************************************************************************************
+2019-04-20 22:16:08,072 p=75834 u=Spudly |  task path: /Users/Spudly/playground/ansithon/semi_perfect_world.yml:17
+2019-04-20 22:16:16,041 p=75834 u=Spudly |  The full traceback is:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/ansible/2.7.10/libexec/lib/python3.7/site-packages/ansible/executor/task_executor.py", line 140, in run
+    res = self._execute()
+  File "/usr/local/Cellar/ansible/2.7.10/libexec/lib/python3.7/site-packages/ansible/executor/task_executor.py", line 612, in _execute
+    result = self._handler.run(task_vars=variables)
+  File "/usr/local/Cellar/ansible/2.7.10/libexec/lib/python3.7/site-packages/ansible/plugins/action/telnet.py", line 62, in run
+    tn = telnetlib.Telnet(host, port, timeout)
+  File "/usr/local/opt/python/Frameworks/Python.framework/Versions/3.7/lib/python3.7/telnetlib.py", line 218, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/opt/python/Frameworks/Python.framework/Versions/3.7/lib/python3.7/telnetlib.py", line 234, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/opt/python/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/local/opt/python/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 60] Operation timed out
+
+2019-04-20 22:16:16,042 p=75834 u=Spudly |  fatal: [R1]: FAILED! => {
+    "msg": "Unexpected failure during module execution.",
+    "stdout": ""
+}
+2019-04-20 22:16:16,049 p=75834 u=Spudly |  	to retry, use: --limit @/Users/Spudly/playground/ansithon/semi_perfect_world.retry
+
+2019-04-20 22:16:16,050 p=75834 u=Spudly |  PLAY RECAP *************************************************************************************************************************************
+2019-04-20 22:16:16,051 p=75834 u=Spudly |  R1                         : ok=1    changed=0    unreachable=0    failed=1   

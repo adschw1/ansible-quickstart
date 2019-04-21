@@ -3,6 +3,6 @@ routers:
     R1:  
       ansible_host: 10.110.20.94    
       ansible_port: 2001
-    R2:  
-      ansible_host: 10.110.20.94    
-      ansible_port: 2002
+    # R2:  
+    #   ansible_host: 10.110.20.94    
+    #   ansible_port: 2002
