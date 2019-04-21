@@ -1,34 +1,12 @@
 ---
 - name: Configure Cisco IOU
-  hosts: routers
+  hosts: r1_r3
   gather_facts: False
   tasks:
-    - debug:
-        msg: '{{ansible_host}} {{ansible_port}}'
-    # - name: Get Past Prompts
-    #   shell: |
-    #     set timeout 90
-    #     spawn telnet {{ansible_host}} {{ansible_port}}
-
-    #     expect "Escape character is '^]'."
-    #     send "\n"
-
-    #     expect ""
-    #     send "\n\n\n"
-    #     sleep 30
-    #     expect """
-    #     send "no\n"
-    #     expect ""
-    #     send "\n\n\n"
-    #     sleep 30
-    #     expect ""
-    #     send "\n"
-    #   args:
-    #     executable: /usr/bin/expect
-    #   changed_when: yes
-    #   delegate_to: localhost
-
-    - name: Configure Devices
+    - name: Now Configuring
+      debug:
+        msg: '{{inventory_hostname}}: {{ansible_host}} {{ansible_port}}'
+    - name: 
       shell: |
         set timeout 5
         
@@ -36,20 +14,57 @@
 
         expect "Escape character is '^]'."
         send "\n\n\n"
-
-        # expect "% Please answer 'yes' or 'no'."
-        # send "no\n\n"
-
-        # sleep 5
-        # expect "Press RETURN to get started!"
-        # send "\n\n\n"
-        # sleep 15
     
         expect "Router>"
-        send "\n term length 0 \n en \n conf t \n host {{inventory_hostname}} \n end \n wr"
-        
+        send "\nterm length 0\nen\nconf t\nhost {{inventory_hostname}}\n{{eth0}}\n{{eth0_ip}}\nno shut\n{{eth1}}\n{{eth1_ip}}\nno shut\nexit\nRouter ospf 1\n{{ospf}}\nend\nwr\n"
+
       args:
         executable: /usr/bin/expect
       changed_when: yes
       delegate_to: localhost
+- name: Configure Cisco IOU
+  hosts: r2
+  gather_facts: False
+  tasks:
+    - name: Now Configuring
+      debug:
+        msg: '{{inventory_hostname}}: {{ansible_host}} {{ansible_port}}'
+    - name: 
+      shell: |
+        set timeout 5
+        
+        spawn telnet {{ansible_host}} {{ansible_port}}
 
+        expect "Escape character is '^]'."
+        send "\n\n\n"
+    
+        expect "Router>"
+        send "\nterm length 0\nen\nconf t\nhost {{inventory_hostname}}\n{{eth0}}\n{{eth0_ip}}\nno shut\n{{eth1}}\n{{eth1_ip}}\nno shut\n{{eth11}}\n{{eth11_ip}}\nno shut\nexit\nRouter ospf 1\n{{ospf}}\nend\n\n"
+
+      args:
+        executable: /usr/bin/expect
+      changed_when: yes
+      delegate_to: localhost
+- name: Configure Cisco IOU
+  hosts: pcs
+  gather_facts: False
+  tasks:
+    - name: Now Configuring
+      debug:
+        msg: '{{inventory_hostname}}: {{ansible_host}} {{ansible_port}}'
+    - name: 
+      shell: |
+        set timeout 5
+        
+        spawn telnet {{ansible_host}} {{ansible_port}}
+
+        expect "Escape character is '^]'."
+        send "\n\n\n"
+    
+        expect "Router>"
+        send "\nterm length 0\nen\nconf t\nhost {{inventory_hostname}}\n{{gate}}\nno ip routing\n{{eth0}}\n{{eth0_ip}}\nno shut\nend\nwr\n"
+
+      args:
+        executable: /usr/bin/expect
+      changed_when: yes
+      delegate_to: localhost

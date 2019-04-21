@@ -96,3 +96,521 @@ TimeoutError: [Errno 60] Operation timed out
 
 2019-04-20 22:16:16,050 p=75834 u=Spudly |  PLAY RECAP *************************************************************************************************************************************
 2019-04-20 22:16:16,051 p=75834 u=Spudly |  R1                         : ok=1    changed=0    unreachable=0    failed=1   
+2019-04-20 22:29:33,213 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-20 22:29:33,218 p=77642 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-20 22:29:33,229 p=77642 u=Spudly |  TASK [debug] **********************************************************************************
+2019-04-20 22:29:33,273 p=77642 u=Spudly |  ok: [R1] => {
+    "msg": "10.110.20.94 2001"
+}
+2019-04-20 22:29:33,284 p=77642 u=Spudly |  TASK [Configure Devices] **********************************************************************
+2019-04-20 22:29:38,842 p=77642 u=Spudly |  changed: [R1 -> localhost]
+2019-04-20 22:29:38,844 p=77642 u=Spudly |  PLAY RECAP ************************************************************************************
+2019-04-20 22:29:38,844 p=77642 u=Spudly |  R1                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-20 22:33:49,043 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-20 22:33:49,049 p=78417 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-20 22:33:49,059 p=78417 u=Spudly |  TASK [debug] **********************************************************************************
+2019-04-20 22:33:49,106 p=78417 u=Spudly |  ok: [R1] => {
+    "msg": "10.110.20.94 2001"
+}
+2019-04-20 22:33:49,115 p=78417 u=Spudly |  TASK [Configure Devices] **********************************************************************
+2019-04-20 22:33:59,950 p=78417 u=Spudly |  changed: [R1 -> localhost]
+2019-04-20 22:33:59,953 p=78417 u=Spudly |  PLAY RECAP ************************************************************************************
+2019-04-20 22:33:59,953 p=78417 u=Spudly |  R1                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-20 22:34:54,766 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-20 22:34:54,771 p=78757 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-20 22:34:54,781 p=78757 u=Spudly |  TASK [debug] **********************************************************************************
+2019-04-20 22:34:54,826 p=78757 u=Spudly |  ok: [R1] => {
+    "msg": "10.110.20.94 2001"
+}
+2019-04-20 22:34:54,836 p=78757 u=Spudly |  TASK [Configure Devices] **********************************************************************
+2019-04-20 22:35:05,447 p=78757 u=Spudly |  changed: [R1 -> localhost]
+2019-04-20 22:35:05,450 p=78757 u=Spudly |  PLAY RECAP ************************************************************************************
+2019-04-20 22:35:05,450 p=78757 u=Spudly |  R1                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-20 22:37:18,664 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-20 22:37:18,670 p=79153 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-20 22:37:18,680 p=79153 u=Spudly |  TASK [debug] **********************************************************************************
+2019-04-20 22:37:18,728 p=79153 u=Spudly |  ok: [R1] => {
+    "msg": "10.110.20.94 2001"
+}
+2019-04-20 22:37:18,738 p=79153 u=Spudly |  TASK [Configure Devices] **********************************************************************
+2019-04-20 22:37:24,237 p=79153 u=Spudly |  changed: [R1 -> localhost]
+2019-04-20 22:37:24,239 p=79153 u=Spudly |  PLAY RECAP ************************************************************************************
+2019-04-20 22:37:24,239 p=79153 u=Spudly |  R1                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-20 22:39:44,229 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-20 22:39:44,234 p=79845 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-20 22:39:44,244 p=79845 u=Spudly |  TASK [debug] **********************************************************************************
+2019-04-20 22:39:44,286 p=79845 u=Spudly |  ok: [R1] => {
+    "msg": "10.110.20.94 2001 192.168.1.1 255.255.255.0 eth0"
+}
+2019-04-20 22:39:44,297 p=79845 u=Spudly |  TASK [Configure Devices] **********************************************************************
+2019-04-20 22:39:49,791 p=79845 u=Spudly |  changed: [R1 -> localhost]
+2019-04-20 22:39:49,794 p=79845 u=Spudly |  PLAY RECAP ************************************************************************************
+2019-04-20 22:39:49,794 p=79845 u=Spudly |  R1                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-20 22:42:06,326 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-20 22:42:06,331 p=80663 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-20 22:42:06,341 p=80663 u=Spudly |  TASK [debug] **********************************************************************************
+2019-04-20 22:42:06,389 p=80663 u=Spudly |  ok: [R1] => {
+    "msg": "10.110.20.94 2001 192.168.1.1 255.0.0.0 Ethernet0/0"
+}
+2019-04-20 22:42:06,400 p=80663 u=Spudly |  ok: [R2] => {
+    "msg": "10.110.20.94 2002 192.168.1.2 255.0.0.0 Ethernet0/0"
+}
+2019-04-20 22:42:06,411 p=80663 u=Spudly |  TASK [Configure Devices] **********************************************************************
+2019-04-20 22:42:06,885 p=80663 u=Spudly |  changed: [R2 -> localhost]
+2019-04-20 22:42:11,915 p=80663 u=Spudly |  changed: [R1 -> localhost]
+2019-04-20 22:42:11,918 p=80663 u=Spudly |  PLAY RECAP ************************************************************************************
+2019-04-20 22:42:11,918 p=80663 u=Spudly |  R1                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-20 22:42:11,919 p=80663 u=Spudly |  R2                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-20 22:50:01,674 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-20 22:50:01,684 p=81812 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-20 22:50:01,695 p=81812 u=Spudly |  TASK [debug] **********************************************************************************
+2019-04-20 22:50:01,753 p=81812 u=Spudly |  ok: [R1] => {
+    "msg": "10.110.20.94 2001 192.168.1.1 255.0.0.0 Ethernet0/0"
+}
+2019-04-20 22:50:01,766 p=81812 u=Spudly |  ok: [R2] => {
+    "msg": "10.110.20.94 2002 192.168.1.2 255.0.0.0 Ethernet0/0"
+}
+2019-04-20 22:50:01,778 p=81812 u=Spudly |  TASK [Get Past Prompts] ***********************************************************************
+2019-04-20 22:50:07,334 p=81812 u=Spudly |  changed: [R1 -> localhost]
+2019-04-20 22:50:07,335 p=81812 u=Spudly |  changed: [R2 -> localhost]
+2019-04-20 22:50:07,345 p=81812 u=Spudly |  TASK [Configure Devices] **********************************************************************
+2019-04-20 22:50:12,162 p=81812 u=Spudly |  changed: [R2 -> localhost]
+2019-04-20 22:50:12,698 p=81812 u=Spudly |  changed: [R1 -> localhost]
+2019-04-20 22:50:12,701 p=81812 u=Spudly |  PLAY RECAP ************************************************************************************
+2019-04-20 22:50:12,702 p=81812 u=Spudly |  R1                         : ok=3    changed=2    unreachable=0    failed=0   
+2019-04-20 22:50:12,702 p=81812 u=Spudly |  R2                         : ok=3    changed=2    unreachable=0    failed=0   
+2019-04-20 22:51:10,174 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-20 22:51:10,179 p=82082 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-20 22:51:10,191 p=82082 u=Spudly |  TASK [debug] **********************************************************************************
+2019-04-20 22:51:10,248 p=82082 u=Spudly |  ok: [R1] => {
+    "msg": "10.110.20.94 2001 192.168.1.1 255.0.0.0 Ethernet0/0"
+}
+2019-04-20 22:51:10,253 p=82082 u=Spudly |  ok: [R2] => {
+    "msg": "10.110.20.94 2002 192.168.1.2 255.0.0.0 Ethernet0/0"
+}
+2019-04-20 22:51:10,264 p=82082 u=Spudly |  TASK [Get Past Prompts] ***********************************************************************
+2019-04-20 22:51:15,726 p=82082 u=Spudly |  changed: [R1 -> localhost]
+2019-04-20 22:51:15,818 p=82082 u=Spudly |  changed: [R2 -> localhost]
+2019-04-20 22:51:15,832 p=82082 u=Spudly |  TASK [Configure Devices] **********************************************************************
+2019-04-20 22:51:21,189 p=82082 u=Spudly |  changed: [R1 -> localhost]
+2019-04-20 22:51:21,203 p=82082 u=Spudly |  changed: [R2 -> localhost]
+2019-04-20 22:51:21,207 p=82082 u=Spudly |  PLAY RECAP ************************************************************************************
+2019-04-20 22:51:21,207 p=82082 u=Spudly |  R1                         : ok=3    changed=2    unreachable=0    failed=0   
+2019-04-20 22:51:21,207 p=82082 u=Spudly |  R2                         : ok=3    changed=2    unreachable=0    failed=0   
+2019-04-20 22:52:03,868 p=82767 u=Spudly |  ansible-playbook 2.7.10
+  config file = /Users/Spudly/playground/ansithon/ansible.cfg
+  configured module search path = ['/Users/Spudly/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/Cellar/ansible/2.7.10/libexec/lib/python3.7/site-packages/ansible
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 3.7.3 (default, Mar 27 2019, 09:23:39) [Clang 10.0.0 (clang-1000.11.45.5)]
+2019-04-20 22:52:03,868 p=82767 u=Spudly |  Using /Users/Spudly/playground/ansithon/ansible.cfg as config file
+2019-04-20 22:52:03,880 p=82767 u=Spudly |  /Users/Spudly/playground/ansithon/poc_inventory.yaml did not meet host_list requirements, check plugin documentation if this is unexpected
+2019-04-20 22:52:03,881 p=82767 u=Spudly |  /Users/Spudly/playground/ansithon/poc_inventory.yaml did not meet script requirements, check plugin documentation if this is unexpected
+2019-04-20 22:52:03,885 p=82767 u=Spudly |  Parsed /Users/Spudly/playground/ansithon/poc_inventory.yaml inventory source with yaml plugin
+2019-04-20 22:52:04,207 p=82767 u=Spudly |  PLAYBOOK: semi_perfect_world.yml ***************************************************************************************************************
+2019-04-20 22:52:04,208 p=82767 u=Spudly |  1 plays in semi_perfect_world.yml
+2019-04-20 22:52:04,250 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-20 22:52:04,257 p=82767 u=Spudly |  PLAY [Configure Routers through Telnet] ********************************************************************************************************
+2019-04-20 22:52:04,260 p=82767 u=Spudly |  META: ran handlers
+2019-04-20 22:52:04,268 p=82767 u=Spudly |  TASK [debug] ***********************************************************************************************************************************
+2019-04-20 22:52:04,268 p=82767 u=Spudly |  task path: /Users/Spudly/playground/ansithon/semi_perfect_world.yml:6
+2019-04-20 22:52:04,336 p=82767 u=Spudly |  ok: [R1] => {
+    "msg": "Trying: 10.110.20.94 2001"
+}
+2019-04-20 22:52:04,350 p=82767 u=Spudly |  ok: [R2] => {
+    "msg": "Trying: 10.110.20.94 2002"
+}
+2019-04-20 22:52:04,361 p=82767 u=Spudly |  TASK [Configure Router] ************************************************************************************************************************
+2019-04-20 22:52:04,362 p=82767 u=Spudly |  task path: /Users/Spudly/playground/ansithon/semi_perfect_world.yml:17
+2019-04-20 22:52:12,355 p=82767 u=Spudly |  The full traceback is:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/ansible/2.7.10/libexec/lib/python3.7/site-packages/ansible/executor/task_executor.py", line 140, in run
+    res = self._execute()
+  File "/usr/local/Cellar/ansible/2.7.10/libexec/lib/python3.7/site-packages/ansible/executor/task_executor.py", line 612, in _execute
+    result = self._handler.run(task_vars=variables)
+  File "/usr/local/Cellar/ansible/2.7.10/libexec/lib/python3.7/site-packages/ansible/plugins/action/telnet.py", line 62, in run
+    tn = telnetlib.Telnet(host, port, timeout)
+  File "/usr/local/opt/python/Frameworks/Python.framework/Versions/3.7/lib/python3.7/telnetlib.py", line 218, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/opt/python/Frameworks/Python.framework/Versions/3.7/lib/python3.7/telnetlib.py", line 234, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/opt/python/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/local/opt/python/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 60] Operation timed out
+
+2019-04-20 22:52:12,356 p=82767 u=Spudly |  fatal: [R1]: FAILED! => {
+    "msg": "Unexpected failure during module execution.",
+    "stdout": ""
+}
+2019-04-20 22:52:12,365 p=82767 u=Spudly |  The full traceback is:
+Traceback (most recent call last):
+  File "/usr/local/Cellar/ansible/2.7.10/libexec/lib/python3.7/site-packages/ansible/executor/task_executor.py", line 140, in run
+    res = self._execute()
+  File "/usr/local/Cellar/ansible/2.7.10/libexec/lib/python3.7/site-packages/ansible/executor/task_executor.py", line 612, in _execute
+    result = self._handler.run(task_vars=variables)
+  File "/usr/local/Cellar/ansible/2.7.10/libexec/lib/python3.7/site-packages/ansible/plugins/action/telnet.py", line 62, in run
+    tn = telnetlib.Telnet(host, port, timeout)
+  File "/usr/local/opt/python/Frameworks/Python.framework/Versions/3.7/lib/python3.7/telnetlib.py", line 218, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/opt/python/Frameworks/Python.framework/Versions/3.7/lib/python3.7/telnetlib.py", line 234, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/opt/python/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/local/opt/python/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 60] Operation timed out
+
+2019-04-20 22:52:12,366 p=82767 u=Spudly |  fatal: [R2]: FAILED! => {
+    "msg": "Unexpected failure during module execution.",
+    "stdout": ""
+}
+2019-04-20 22:52:12,377 p=82767 u=Spudly |  	to retry, use: --limit @/Users/Spudly/playground/ansithon/semi_perfect_world.retry
+
+2019-04-20 22:52:12,378 p=82767 u=Spudly |  PLAY RECAP *************************************************************************************************************************************
+2019-04-20 22:52:12,379 p=82767 u=Spudly |  R1                         : ok=1    changed=0    unreachable=0    failed=1   
+2019-04-20 22:52:12,380 p=82767 u=Spudly |  R2                         : ok=1    changed=0    unreachable=0    failed=1   
+2019-04-20 22:52:20,568 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-20 22:52:20,574 p=82860 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-20 22:52:20,583 p=82860 u=Spudly |  TASK [debug] **********************************************************************************
+2019-04-20 22:52:20,645 p=82860 u=Spudly |  ok: [R1] => {
+    "msg": "10.110.20.94 2001 192.168.1.1 255.0.0.0 Ethernet0/0"
+}
+2019-04-20 22:52:20,657 p=82860 u=Spudly |  ok: [R2] => {
+    "msg": "10.110.20.94 2002 192.168.1.2 255.0.0.0 Ethernet0/0"
+}
+2019-04-20 22:52:20,667 p=82860 u=Spudly |  TASK [Get Past Prompts] ***********************************************************************
+2019-04-20 22:52:21,164 p=82860 u=Spudly |  changed: [R1 -> localhost]
+2019-04-20 22:52:21,166 p=82860 u=Spudly |  changed: [R2 -> localhost]
+2019-04-20 22:52:21,175 p=82860 u=Spudly |  TASK [Configure Devices] **********************************************************************
+2019-04-20 22:52:26,545 p=82860 u=Spudly |  changed: [R1 -> localhost]
+2019-04-20 22:52:26,558 p=82860 u=Spudly |  changed: [R2 -> localhost]
+2019-04-20 22:52:26,562 p=82860 u=Spudly |  PLAY RECAP ************************************************************************************
+2019-04-20 22:52:26,562 p=82860 u=Spudly |  R1                         : ok=3    changed=2    unreachable=0    failed=0   
+2019-04-20 22:52:26,563 p=82860 u=Spudly |  R2                         : ok=3    changed=2    unreachable=0    failed=0   
+2019-04-20 22:53:25,058 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-20 22:53:25,065 p=84044 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-20 22:53:25,075 p=84044 u=Spudly |  TASK [debug] **********************************************************************************
+2019-04-20 22:53:25,127 p=84044 u=Spudly |  ok: [R1] => {
+    "msg": "10.110.20.94 2001 192.168.1.1 255.0.0.0 Ethernet0/0"
+}
+2019-04-20 22:53:25,138 p=84044 u=Spudly |  ok: [R2] => {
+    "msg": "10.110.20.94 2002 192.168.1.2 255.0.0.0 Ethernet0/0"
+}
+2019-04-20 22:53:25,147 p=84044 u=Spudly |  TASK [Get Past Prompts] ***********************************************************************
+2019-04-20 22:53:25,642 p=84044 u=Spudly |  changed: [R2 -> localhost]
+2019-04-20 22:53:25,643 p=84044 u=Spudly |  changed: [R1 -> localhost]
+2019-04-20 22:53:25,659 p=84044 u=Spudly |  TASK [Configure Devices] **********************************************************************
+2019-04-20 22:53:31,029 p=84044 u=Spudly |  changed: [R1 -> localhost]
+2019-04-20 22:53:31,041 p=84044 u=Spudly |  changed: [R2 -> localhost]
+2019-04-20 22:53:31,045 p=84044 u=Spudly |  PLAY RECAP ************************************************************************************
+2019-04-20 22:53:31,046 p=84044 u=Spudly |  R1                         : ok=3    changed=2    unreachable=0    failed=0   
+2019-04-20 22:53:31,046 p=84044 u=Spudly |  R2                         : ok=3    changed=2    unreachable=0    failed=0   
+2019-04-20 22:55:34,733 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-20 22:55:34,738 p=84924 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-20 22:55:34,748 p=84924 u=Spudly |  TASK [debug] **********************************************************************************
+2019-04-20 22:55:34,800 p=84924 u=Spudly |  ok: [R1] => {
+    "msg": "10.110.20.94 2001 192.168.1.1 255.0.0.0 Ethernet0/0"
+}
+2019-04-20 22:55:34,814 p=84924 u=Spudly |  ok: [R2] => {
+    "msg": "10.110.20.94 2002 192.168.1.2 255.0.0.0 Ethernet0/0"
+}
+2019-04-20 22:55:34,825 p=84924 u=Spudly |  TASK [Get Past Prompts] ***********************************************************************
+2019-04-20 22:55:35,286 p=84924 u=Spudly |  changed: [R2 -> localhost]
+2019-04-20 22:55:40,349 p=84924 u=Spudly |  changed: [R1 -> localhost]
+2019-04-20 22:55:40,363 p=84924 u=Spudly |  TASK [Configure Devices] **********************************************************************
+2019-04-20 22:55:40,739 p=84924 u=Spudly |  changed: [R2 -> localhost]
+2019-04-20 22:55:45,726 p=84924 u=Spudly |  changed: [R1 -> localhost]
+2019-04-20 22:55:45,729 p=84924 u=Spudly |  PLAY RECAP ************************************************************************************
+2019-04-20 22:55:45,729 p=84924 u=Spudly |  R1                         : ok=3    changed=2    unreachable=0    failed=0   
+2019-04-20 22:55:45,729 p=84924 u=Spudly |  R2                         : ok=3    changed=2    unreachable=0    failed=0   
+2019-04-20 22:59:15,659 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-20 22:59:15,665 p=86123 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-20 22:59:15,675 p=86123 u=Spudly |  TASK [debug] **********************************************************************************
+2019-04-20 22:59:15,731 p=86123 u=Spudly |  ok: [R1] => {
+    "msg": "10.110.20.94 2001 192.168.1.1 255.0.0.0 Ethernet0/0"
+}
+2019-04-20 22:59:15,740 p=86123 u=Spudly |  ok: [R2] => {
+    "msg": "10.110.20.94 2002 192.168.1.2 255.0.0.0 Ethernet0/0"
+}
+2019-04-20 22:59:15,751 p=86123 u=Spudly |  TASK [Configure Devices] **********************************************************************
+2019-04-20 22:59:16,240 p=86123 u=Spudly |  changed: [R1 -> localhost]
+2019-04-20 22:59:16,241 p=86123 u=Spudly |  changed: [R2 -> localhost]
+2019-04-20 22:59:16,243 p=86123 u=Spudly |  PLAY RECAP ************************************************************************************
+2019-04-20 22:59:16,244 p=86123 u=Spudly |  R1                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-20 22:59:16,244 p=86123 u=Spudly |  R2                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-20 23:00:48,341 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-20 23:00:48,346 p=87154 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-20 23:00:48,357 p=87154 u=Spudly |  TASK [debug] **********************************************************************************
+2019-04-20 23:00:48,412 p=87154 u=Spudly |  ok: [R1] => {
+    "msg": "10.110.20.94 2001 192.168.1.1 255.0.0.0 Ethernet0/0"
+}
+2019-04-20 23:00:48,419 p=87154 u=Spudly |  ok: [R2] => {
+    "msg": "10.110.20.94 2002 192.168.1.2 255.0.0.0 Ethernet0/0"
+}
+2019-04-20 23:00:48,433 p=87154 u=Spudly |  TASK [Configure Devices] **********************************************************************
+2019-04-20 23:00:48,913 p=87154 u=Spudly |  changed: [R1 -> localhost]
+2019-04-20 23:00:53,883 p=87154 u=Spudly |  changed: [R2 -> localhost]
+2019-04-20 23:00:53,887 p=87154 u=Spudly |  PLAY RECAP ************************************************************************************
+2019-04-20 23:00:53,888 p=87154 u=Spudly |  R1                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-20 23:00:53,888 p=87154 u=Spudly |  R2                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:06:00,727 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-21 17:06:00,732 p=89161 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-21 17:06:00,744 p=89161 u=Spudly |  TASK [debug] **********************************************************************************
+2019-04-21 17:06:00,803 p=89161 u=Spudly |  ok: [R1] => {
+    "msg": "10.110.20.94 2001 192.168.1.1 255.0.0.0 Ethernet0/0"
+}
+2019-04-21 17:06:00,813 p=89161 u=Spudly |  ok: [R2] => {
+    "msg": "10.110.20.94 2002 192.168.1.2 255.0.0.0 Ethernet0/0"
+}
+2019-04-21 17:06:00,826 p=89161 u=Spudly |  TASK [Configure Devices] **********************************************************************
+2019-04-21 17:06:01,299 p=89161 u=Spudly |  changed: [R2 -> localhost]
+2019-04-21 17:06:01,301 p=89161 u=Spudly |  changed: [R1 -> localhost]
+2019-04-21 17:06:01,306 p=89161 u=Spudly |  PLAY RECAP ************************************************************************************
+2019-04-21 17:06:01,307 p=89161 u=Spudly |  R1                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:06:01,308 p=89161 u=Spudly |  R2                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:06:03,133 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-21 17:06:03,138 p=89276 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-21 17:06:03,149 p=89276 u=Spudly |  TASK [debug] **********************************************************************************
+2019-04-21 17:06:03,212 p=89276 u=Spudly |  ok: [R1] => {
+    "msg": "10.110.20.94 2001 192.168.1.1 255.0.0.0 Ethernet0/0"
+}
+2019-04-21 17:06:03,220 p=89276 u=Spudly |  ok: [R2] => {
+    "msg": "10.110.20.94 2002 192.168.1.2 255.0.0.0 Ethernet0/0"
+}
+2019-04-21 17:06:03,230 p=89276 u=Spudly |  TASK [Configure Devices] **********************************************************************
+2019-04-21 17:06:03,675 p=89276 u=Spudly |  changed: [R1 -> localhost]
+2019-04-21 17:06:03,677 p=89276 u=Spudly |  changed: [R2 -> localhost]
+2019-04-21 17:06:03,679 p=89276 u=Spudly |  PLAY RECAP ************************************************************************************
+2019-04-21 17:06:03,679 p=89276 u=Spudly |  R1                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:06:03,680 p=89276 u=Spudly |  R2                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:06:05,228 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-21 17:06:05,234 p=89393 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-21 17:06:05,244 p=89393 u=Spudly |  TASK [debug] **********************************************************************************
+2019-04-21 17:06:05,301 p=89393 u=Spudly |  ok: [R1] => {
+    "msg": "10.110.20.94 2001 192.168.1.1 255.0.0.0 Ethernet0/0"
+}
+2019-04-21 17:06:05,314 p=89393 u=Spudly |  ok: [R2] => {
+    "msg": "10.110.20.94 2002 192.168.1.2 255.0.0.0 Ethernet0/0"
+}
+2019-04-21 17:06:05,326 p=89393 u=Spudly |  TASK [Configure Devices] **********************************************************************
+2019-04-21 17:06:05,781 p=89393 u=Spudly |  changed: [R1 -> localhost]
+2019-04-21 17:06:05,782 p=89393 u=Spudly |  changed: [R2 -> localhost]
+2019-04-21 17:06:05,784 p=89393 u=Spudly |  PLAY RECAP ************************************************************************************
+2019-04-21 17:06:05,784 p=89393 u=Spudly |  R1                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:06:05,785 p=89393 u=Spudly |  R2                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:41:07,122 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-21 17:41:07,128 p=91214 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-21 17:41:07,139 p=91214 u=Spudly |  TASK [debug] **********************************************************************************
+2019-04-21 17:41:07,161 p=91214 u=Spudly |  fatal: [R1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'ip' is undefined\n\nThe error appears to have been in '/Users/Spudly/playground/ansithon/poc_playbook.yml': line 6, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - debug:\n      ^ here\n"}
+2019-04-21 17:41:07,171 p=91214 u=Spudly |  fatal: [R3]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'ip' is undefined\n\nThe error appears to have been in '/Users/Spudly/playground/ansithon/poc_playbook.yml': line 6, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - debug:\n      ^ here\n"}
+2019-04-21 17:41:07,176 p=91214 u=Spudly |  	to retry, use: --limit @/Users/Spudly/playground/ansithon/poc_playbook.retry
+
+2019-04-21 17:41:07,176 p=91214 u=Spudly |  PLAY RECAP ************************************************************************************
+2019-04-21 17:41:07,177 p=91214 u=Spudly |  R1                         : ok=0    changed=0    unreachable=0    failed=1   
+2019-04-21 17:41:07,178 p=91214 u=Spudly |  R3                         : ok=0    changed=0    unreachable=0    failed=1   
+2019-04-21 17:41:08,825 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-21 17:41:08,830 p=91287 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-21 17:41:08,840 p=91287 u=Spudly |  TASK [debug] **********************************************************************************
+2019-04-21 17:41:08,862 p=91287 u=Spudly |  fatal: [R1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'ip' is undefined\n\nThe error appears to have been in '/Users/Spudly/playground/ansithon/poc_playbook.yml': line 6, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - debug:\n      ^ here\n"}
+2019-04-21 17:41:08,870 p=91287 u=Spudly |  fatal: [R3]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'ip' is undefined\n\nThe error appears to have been in '/Users/Spudly/playground/ansithon/poc_playbook.yml': line 6, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - debug:\n      ^ here\n"}
+2019-04-21 17:41:08,873 p=91287 u=Spudly |  	to retry, use: --limit @/Users/Spudly/playground/ansithon/poc_playbook.retry
+
+2019-04-21 17:41:08,873 p=91287 u=Spudly |  PLAY RECAP ************************************************************************************
+2019-04-21 17:41:08,874 p=91287 u=Spudly |  R1                         : ok=0    changed=0    unreachable=0    failed=1   
+2019-04-21 17:41:08,874 p=91287 u=Spudly |  R3                         : ok=0    changed=0    unreachable=0    failed=1   
+2019-04-21 17:42:45,075 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-21 17:42:45,080 p=91435 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-21 17:42:45,090 p=91435 u=Spudly |  TASK [Now Configuring] ************************************************************************
+2019-04-21 17:42:45,141 p=91435 u=Spudly |  ok: [R1] => {
+    "msg": "R1: 10.110.20.94 2001"
+}
+2019-04-21 17:42:45,149 p=91435 u=Spudly |  ok: [R3] => {
+    "msg": "R3: 10.110.20.94 2003"
+}
+2019-04-21 17:42:45,159 p=91435 u=Spudly |  TASK [shell] **********************************************************************************
+2019-04-21 17:42:45,574 p=91435 u=Spudly |  changed: [R3 -> localhost]
+2019-04-21 17:42:50,573 p=91435 u=Spudly |  changed: [R1 -> localhost]
+2019-04-21 17:42:50,576 p=91435 u=Spudly |  PLAY RECAP ************************************************************************************
+2019-04-21 17:42:50,576 p=91435 u=Spudly |  R1                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:42:50,577 p=91435 u=Spudly |  R3                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:42:52,181 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-21 17:42:52,187 p=91552 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-21 17:42:52,197 p=91552 u=Spudly |  TASK [Now Configuring] ************************************************************************
+2019-04-21 17:42:52,248 p=91552 u=Spudly |  ok: [R1] => {
+    "msg": "R1: 10.110.20.94 2001"
+}
+2019-04-21 17:42:52,256 p=91552 u=Spudly |  ok: [R3] => {
+    "msg": "R3: 10.110.20.94 2003"
+}
+2019-04-21 17:42:52,268 p=91552 u=Spudly |  TASK [shell] **********************************************************************************
+2019-04-21 17:42:52,687 p=91552 u=Spudly |  changed: [R3 -> localhost]
+2019-04-21 17:42:57,692 p=91552 u=Spudly |  changed: [R1 -> localhost]
+2019-04-21 17:42:57,695 p=91552 u=Spudly |  PLAY RECAP ************************************************************************************
+2019-04-21 17:42:57,696 p=91552 u=Spudly |  R1                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:42:57,696 p=91552 u=Spudly |  R3                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:55:38,807 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-21 17:55:38,812 p=93096 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-21 17:55:38,822 p=93096 u=Spudly |  TASK [Now Configuring] ************************************************************************
+2019-04-21 17:55:38,872 p=93096 u=Spudly |  ok: [R1] => {
+    "msg": "R1: 10.110.20.94 2001"
+}
+2019-04-21 17:55:38,881 p=93096 u=Spudly |  ok: [R3] => {
+    "msg": "R3: 10.110.20.94 2003"
+}
+2019-04-21 17:55:38,891 p=93096 u=Spudly |  TASK [shell] **********************************************************************************
+2019-04-21 17:55:44,313 p=93096 u=Spudly |  changed: [R3 -> localhost]
+2019-04-21 17:55:44,317 p=93096 u=Spudly |  changed: [R1 -> localhost]
+2019-04-21 17:55:44,325 p=93096 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-21 17:55:44,331 p=93096 u=Spudly |  TASK [Now Configuring] ************************************************************************
+2019-04-21 17:55:44,373 p=93096 u=Spudly |  ok: [R2] => {
+    "msg": "R2: 10.110.20.94 2002"
+}
+2019-04-21 17:55:44,382 p=93096 u=Spudly |  TASK [shell] **********************************************************************************
+2019-04-21 17:55:49,682 p=93096 u=Spudly |  changed: [R2 -> localhost]
+2019-04-21 17:55:49,689 p=93096 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-21 17:55:49,696 p=93096 u=Spudly |  TASK [Now Configuring] ************************************************************************
+2019-04-21 17:55:49,753 p=93096 u=Spudly |  ok: [PC1] => {
+    "msg": "PC1: 10.110.20.94 2004"
+}
+2019-04-21 17:55:49,765 p=93096 u=Spudly |  ok: [PC2] => {
+    "msg": "PC2: 10.110.20.94 2005"
+}
+2019-04-21 17:55:49,775 p=93096 u=Spudly |  ok: [PC3] => {
+    "msg": "PC3: 10.110.20.94 2006"
+}
+2019-04-21 17:55:49,786 p=93096 u=Spudly |  TASK [shell] **********************************************************************************
+2019-04-21 17:55:50,185 p=93096 u=Spudly |  changed: [PC1 -> localhost]
+2019-04-21 17:55:50,203 p=93096 u=Spudly |  changed: [PC2 -> localhost]
+2019-04-21 17:55:50,218 p=93096 u=Spudly |  changed: [PC3 -> localhost]
+2019-04-21 17:55:50,221 p=93096 u=Spudly |  PLAY RECAP ************************************************************************************
+2019-04-21 17:55:50,221 p=93096 u=Spudly |  PC1                        : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:55:50,222 p=93096 u=Spudly |  PC2                        : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:55:50,222 p=93096 u=Spudly |  PC3                        : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:55:50,223 p=93096 u=Spudly |  R1                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:55:50,223 p=93096 u=Spudly |  R2                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:55:50,223 p=93096 u=Spudly |  R3                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:56:02,571 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-21 17:56:02,576 p=93310 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-21 17:56:02,586 p=93310 u=Spudly |  TASK [Now Configuring] ************************************************************************
+2019-04-21 17:56:02,638 p=93310 u=Spudly |  ok: [R1] => {
+    "msg": "R1: 10.110.20.94 2001"
+}
+2019-04-21 17:56:02,643 p=93310 u=Spudly |  ok: [R3] => {
+    "msg": "R3: 10.110.20.94 2003"
+}
+2019-04-21 17:56:02,654 p=93310 u=Spudly |  TASK [shell] **********************************************************************************
+2019-04-21 17:56:08,061 p=93310 u=Spudly |  changed: [R1 -> localhost]
+2019-04-21 17:56:08,070 p=93310 u=Spudly |  changed: [R3 -> localhost]
+2019-04-21 17:56:08,079 p=93310 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-21 17:56:08,084 p=93310 u=Spudly |  TASK [Now Configuring] ************************************************************************
+2019-04-21 17:56:08,128 p=93310 u=Spudly |  ok: [R2] => {
+    "msg": "R2: 10.110.20.94 2002"
+}
+2019-04-21 17:56:08,137 p=93310 u=Spudly |  TASK [shell] **********************************************************************************
+2019-04-21 17:56:13,432 p=93310 u=Spudly |  changed: [R2 -> localhost]
+2019-04-21 17:56:13,441 p=93310 u=Spudly |  PLAY [Configure Cisco IOU] ********************************************************************
+2019-04-21 17:56:13,448 p=93310 u=Spudly |  TASK [Now Configuring] ************************************************************************
+2019-04-21 17:56:13,527 p=93310 u=Spudly |  ok: [PC1] => {
+    "msg": "PC1: 10.110.20.94 2004"
+}
+2019-04-21 17:56:13,540 p=93310 u=Spudly |  ok: [PC2] => {
+    "msg": "PC2: 10.110.20.94 2005"
+}
+2019-04-21 17:56:13,555 p=93310 u=Spudly |  ok: [PC3] => {
+    "msg": "PC3: 10.110.20.94 2006"
+}
+2019-04-21 17:56:13,568 p=93310 u=Spudly |  TASK [shell] **********************************************************************************
+2019-04-21 17:56:14,062 p=93310 u=Spudly |  changed: [PC2 -> localhost]
+2019-04-21 17:56:14,085 p=93310 u=Spudly |  changed: [PC3 -> localhost]
+2019-04-21 17:56:18,033 p=93310 u=Spudly |  changed: [PC1 -> localhost]
+2019-04-21 17:56:18,036 p=93310 u=Spudly |  PLAY RECAP ************************************************************************************
+2019-04-21 17:56:18,037 p=93310 u=Spudly |  PC1                        : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:56:18,037 p=93310 u=Spudly |  PC2                        : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:56:18,037 p=93310 u=Spudly |  PC3                        : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:56:18,037 p=93310 u=Spudly |  R1                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:56:18,037 p=93310 u=Spudly |  R2                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:56:18,037 p=93310 u=Spudly |  R3                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:59:17,874 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-21 17:59:17,882 p=97455 u=Spudly |  PLAY [Configure Cisco IOU] ****************************************************************************************************************
+2019-04-21 17:59:17,894 p=97455 u=Spudly |  TASK [Now Configuring] ********************************************************************************************************************
+2019-04-21 17:59:17,945 p=97455 u=Spudly |  ok: [R1] => {
+    "msg": "R1: 10.110.20.94 2001"
+}
+2019-04-21 17:59:17,963 p=97455 u=Spudly |  ok: [R3] => {
+    "msg": "R3: 10.110.20.94 2003"
+}
+2019-04-21 17:59:17,973 p=97455 u=Spudly |  TASK [shell] ******************************************************************************************************************************
+2019-04-21 17:59:23,456 p=97455 u=Spudly |  changed: [R1 -> localhost]
+2019-04-21 17:59:23,458 p=97455 u=Spudly |  changed: [R3 -> localhost]
+2019-04-21 17:59:23,466 p=97455 u=Spudly |  PLAY [Configure Cisco IOU] ****************************************************************************************************************
+2019-04-21 17:59:23,472 p=97455 u=Spudly |  TASK [Now Configuring] ********************************************************************************************************************
+2019-04-21 17:59:23,523 p=97455 u=Spudly |  ok: [R2] => {
+    "msg": "R2: 10.110.20.94 2002"
+}
+2019-04-21 17:59:23,535 p=97455 u=Spudly |  TASK [shell] ******************************************************************************************************************************
+2019-04-21 17:59:28,875 p=97455 u=Spudly |  changed: [R2 -> localhost]
+2019-04-21 17:59:28,885 p=97455 u=Spudly |  PLAY [Configure Cisco IOU] ****************************************************************************************************************
+2019-04-21 17:59:28,891 p=97455 u=Spudly |  TASK [Now Configuring] ********************************************************************************************************************
+2019-04-21 17:59:28,961 p=97455 u=Spudly |  ok: [PC1] => {
+    "msg": "PC1: 10.110.20.94 2004"
+}
+2019-04-21 17:59:28,963 p=97455 u=Spudly |  ok: [PC2] => {
+    "msg": "PC2: 10.110.20.94 2005"
+}
+2019-04-21 17:59:28,978 p=97455 u=Spudly |  ok: [PC3] => {
+    "msg": "PC3: 10.110.20.94 2006"
+}
+2019-04-21 17:59:28,992 p=97455 u=Spudly |  TASK [shell] ******************************************************************************************************************************
+2019-04-21 17:59:29,435 p=97455 u=Spudly |  changed: [PC2 -> localhost]
+2019-04-21 17:59:34,428 p=97455 u=Spudly |  changed: [PC1 -> localhost]
+2019-04-21 17:59:34,453 p=97455 u=Spudly |  changed: [PC3 -> localhost]
+2019-04-21 17:59:34,456 p=97455 u=Spudly |  PLAY RECAP ********************************************************************************************************************************
+2019-04-21 17:59:34,456 p=97455 u=Spudly |  PC1                        : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:59:34,457 p=97455 u=Spudly |  PC2                        : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:59:34,457 p=97455 u=Spudly |  PC3                        : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:59:34,457 p=97455 u=Spudly |  R1                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:59:34,457 p=97455 u=Spudly |  R2                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:59:34,457 p=97455 u=Spudly |  R3                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:59:41,070 passlib.registry registered 'md5_crypt' handler: <class 'passlib.handlers.md5_crypt.md5_crypt'>
+2019-04-21 17:59:41,075 p=97667 u=Spudly |  PLAY [Configure Cisco IOU] ****************************************************************************************************************
+2019-04-21 17:59:41,085 p=97667 u=Spudly |  TASK [Now Configuring] ********************************************************************************************************************
+2019-04-21 17:59:41,149 p=97667 u=Spudly |  ok: [R1] => {
+    "msg": "R1: 10.110.20.94 2001"
+}
+2019-04-21 17:59:41,161 p=97667 u=Spudly |  ok: [R3] => {
+    "msg": "R3: 10.110.20.94 2003"
+}
+2019-04-21 17:59:41,172 p=97667 u=Spudly |  TASK [shell] ******************************************************************************************************************************
+2019-04-21 17:59:46,638 p=97667 u=Spudly |  changed: [R1 -> localhost]
+2019-04-21 17:59:46,648 p=97667 u=Spudly |  changed: [R3 -> localhost]
+2019-04-21 17:59:46,657 p=97667 u=Spudly |  PLAY [Configure Cisco IOU] ****************************************************************************************************************
+2019-04-21 17:59:46,662 p=97667 u=Spudly |  TASK [Now Configuring] ********************************************************************************************************************
+2019-04-21 17:59:46,712 p=97667 u=Spudly |  ok: [R2] => {
+    "msg": "R2: 10.110.20.94 2002"
+}
+2019-04-21 17:59:46,722 p=97667 u=Spudly |  TASK [shell] ******************************************************************************************************************************
+2019-04-21 17:59:52,186 p=97667 u=Spudly |  changed: [R2 -> localhost]
+2019-04-21 17:59:52,195 p=97667 u=Spudly |  PLAY [Configure Cisco IOU] ****************************************************************************************************************
+2019-04-21 17:59:52,200 p=97667 u=Spudly |  TASK [Now Configuring] ********************************************************************************************************************
+2019-04-21 17:59:52,273 p=97667 u=Spudly |  ok: [PC1] => {
+    "msg": "PC1: 10.110.20.94 2004"
+}
+2019-04-21 17:59:52,285 p=97667 u=Spudly |  ok: [PC2] => {
+    "msg": "PC2: 10.110.20.94 2005"
+}
+2019-04-21 17:59:52,298 p=97667 u=Spudly |  ok: [PC3] => {
+    "msg": "PC3: 10.110.20.94 2006"
+}
+2019-04-21 17:59:52,311 p=97667 u=Spudly |  TASK [shell] ******************************************************************************************************************************
+2019-04-21 17:59:57,773 p=97667 u=Spudly |  changed: [PC1 -> localhost]
+2019-04-21 17:59:57,774 p=97667 u=Spudly |  changed: [PC2 -> localhost]
+2019-04-21 17:59:57,834 p=97667 u=Spudly |  changed: [PC3 -> localhost]
+2019-04-21 17:59:57,837 p=97667 u=Spudly |  PLAY RECAP ********************************************************************************************************************************
+2019-04-21 17:59:57,839 p=97667 u=Spudly |  PC1                        : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:59:57,840 p=97667 u=Spudly |  PC2                        : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:59:57,841 p=97667 u=Spudly |  PC3                        : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:59:57,841 p=97667 u=Spudly |  R1                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:59:57,842 p=97667 u=Spudly |  R2                         : ok=2    changed=1    unreachable=0    failed=0   
+2019-04-21 17:59:57,842 p=97667 u=Spudly |  R3                         : ok=2    changed=1    unreachable=0    failed=0   
