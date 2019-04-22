@@ -1,4 +1,4 @@
-Ansible/Python Network Configuration Quickstart Guide
+Ansible Network Configuration Quickstart Guide
 =====================================================
 
 .. contents::
