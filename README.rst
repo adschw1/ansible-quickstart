@@ -317,18 +317,86 @@ Now right away you may notice this doesn't look very pratical, and you would be 
 Generate Config Files through Templates
 =======================================
 
-File Structure::
+Template File Structure for Jinja
+---------------------------------
 
-  templates
-  ├── roles
-  │   ├── router
-  │   │   ├── main.yaml
-  │   │   ├── tasks
-  │   │   │   └── main.yaml
-  │   │   ├── templates
-  │   │   │   └── router.j2
-  │   │   └── vars
-  │   │       └── main.yaml
-  │   ├── computer
-  │   └── switch
+File Structure (directories end with ``/``)::
+
+  templates/
+  ├── roles/
+  │   ├── computer/
+  │   │   ├── tasks/
+  │   │   │   └── main.yaml
+  │   │   ├── templates/
+  │   │   │   └── computer.j2
+  │   │   └── vars/
+  │   │       └── main.yaml
+  │   ├── router/
+  │   │   ├── tasks/
+  │   │   │   └── main.yaml
+  │   │   ├── templates/
+  │   │   │   └── router.j2
+  │   │   └── vars/
+  │   │       └── main.yaml
+  │   └── switch/
+  │       ├── tasks/
+  │       │   └── main.yaml
+  │       ├── templates/
+  │       │   └── switch.j2
+  │       └── vars/
+  │           └── main.yaml
   └── site.yaml
+
+This is the file structure I used, although I am certain it can be accomplished several other ways. The great thing about this file structure is you don't need to specify an inventory file.
+
+Generate Configs from Templates 
+-------------------------------
+
+Let's first create our "driver" that will call upon all the individual roles.
+
+I named mine ``site.yaml`` but anything will work::
+
+  ---
+  - name: Generate All Configuration Files
+    hosts: localhost
+    gather_facts: false
+    roles:
+      - router
+      - switch
+      - computer
+
+Notice this calls upon the directory roles, and then the individual types of devices. This will activate the tasks directory ``main.yaml`` file.
+
+Let's take the role ``router`` as an example::
+
+  ---
+  - name: Generate configuration files
+    # TODO: be sure to change the path to the configs directory
+    template: src=~/playground/ansithon/templates/roles/router/templates/router.j2 dest=~/playground/ansithon/configs/{{item.hostname}}.txt
+    with_items: "{{ routers }}"
+
+Let's break this down, template has two variables ``src`` and dest`` which take us to the location of the router jinja template and config directory respectively.
+
+The line ``with_items: "{{ routers }}"`` tells Ansible which group to use from the ``/vars/main.yaml`` file. For instance you may have different groups of routers or different configuration templates, if so you could send the configurations to different destinations.
+
+Obviously my directories will be different than yours, I recommend using ``/etc/ansible/configs`` on Linux. **Note:** do not confuse this with the Ansible Template module, that is for disseminating the configs to devices.
+
+Next, let's look at our ``/vars/main.yaml`` file::
+
+  ---
+  routers:
+    - hostname: R1
+      secret: cisco1
+      loopback: 1.1.1.1 255.255.255.255
+
+    - hostname: R2
+      secret: cisco2
+      loopback: 2.2.2.2 255.255.255.255
+
+    - hostname: R3
+      secret: cisco3
+      loopback: 3.3.3.3 255.255.255.255
+
+We can see this is a basic yaml inventory file, although the indentation is a little different from what we did previously. These items can be referenced in the ``router.j2`` template by using ``{{ item.hostname }}``, ``{{ item.secret }}``, and ``{{ item.loopback }}``.
+
+Calling our template generation couldn't be simpler, since my file is named ``/templates/site.yaml`` all I need to do is run ``ansible-playbook site.yaml`` and configurations are quickly generated and sent to my ``/configs`` directory
