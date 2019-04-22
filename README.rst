@@ -106,7 +106,7 @@ Two more examples of variations
 Indentation in YAML
 -------------------
 
-Spaces are not mandatory and consistency does not matter
+Spaces are not mandatory and consistency does not matter as long as the ``a:``, ``b:``, ``c:`` and ``-``'s are correctly indented.
 
 .. code-block:: yaml
 
