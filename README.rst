@@ -181,7 +181,7 @@ The sections below will help you get started configuring your Cisco IOS devices.
 Building your Inventory
 -----------------------
 
-Create a ``txt`` file named ``inventory``, this can be accomplished many different ways::
+Create a file named ``inventory`` with the extension ``yml``, ``yaml``, or ``ini``, this can be accomplished many different ways::
 
     touch inventory.ini
     vim inventory.yaml
@@ -365,7 +365,7 @@ I named mine ``site.yaml`` but anything will work::
       - switch
       - computer
 
-Notice this calls upon the directory roles, and then the individual types of devices. This will activate the tasks directory ``main.yaml`` file.
+Notice this calls upon the directory roles, and then the individual types of devices. This will activate the ``/router/tasks/main.yaml`` file.
 
 Let's take the role ``router`` as an example::
 
@@ -377,11 +377,11 @@ Let's take the role ``router`` as an example::
 
 Let's break this down, template has two variables ``src`` and dest`` which take us to the location of the router jinja template and config directory respectively.
 
-The line ``with_items: "{{ routers }}"`` tells Ansible which group to use from the ``/vars/main.yaml`` file. For instance you may have different groups of routers or different configuration templates, if so you could send the configurations to different destinations.
+The line ``with_items: "{{ routers }}"`` tells Ansible which group to use from the ``/router/vars/main.yaml`` file. For instance you may have different groups of routers or different configuration templates, if so you could send the configurations to different destinations.
 
 Obviously my directories will be different than yours, I recommend using ``/etc/ansible/configs`` on Linux. **Note:** do not confuse this with the Ansible Template module, that is for disseminating the configs to devices.
 
-Next, let's look at our ``/vars/main.yaml`` file::
+Next, let's look at our ``/router/vars/main.yaml`` file::
 
   ---
   routers:
@@ -400,3 +400,26 @@ Next, let's look at our ``/vars/main.yaml`` file::
 We can see this is a basic yaml inventory file, although the indentation is a little different from what we did previously. These items can be referenced in the ``router.j2`` template by using ``{{ item.hostname }}``, ``{{ item.secret }}``, and ``{{ item.loopback }}``.
 
 Calling our template generation couldn't be simpler, since my file is named ``/templates/site.yaml`` all I need to do is run ``ansible-playbook site.yaml`` and configurations are quickly generated and sent to my ``/configs`` directory
+
+Finally we need to create our template, this is done in the ``/router/templates/router.j2`` file::
+
+  !
+  no service pad
+  service tcp-keepalives-in
+  service tcp-keepalives-out
+  service timestamps debug datetime msec localtime show-timezone
+  service timestamps log datetime msec localtime show-timezone
+  service password-encryption
+  !
+  hostname {{item.hostname}}
+  !
+  interface loopback0
+  description loopback
+  ip address {{item.loopback}}
+  !
+  enable secret {{item.secret}}
+  boot-start-marker
+  boot-end-marker
+  !
+  logging buffered 32000
+  no logging console
