@@ -3,26 +3,14 @@
   hosts: routers
   gather_facts: no
   tasks:
-    - debug:
-        msg: "Trying: {{ansible_host}} {{ansible_port}}"
-    # - name: Bypass Prompts
-    #   telnet:
-    #     host: "{{ ansible_host }}"
-    #     port: "2002"
-    #     login_prompt: "Would you like to enter initial configuration dialog? [yes/no]:"
-    #     user: "no"
-    #     command:
-    #     - term length 0
-        
     - name: Configure Router
       telnet:
-        # host: "{{ ansible_host }}"
-        # port: "{{ ansible_port }}"
-        login_prompt: ">"
-        user: "term length 0"
+        host: "{{ ansible_host }}"
+        port: "{{ ansible_port }}"
         prompts:
         - "[>|#]"
         command:
+        - term length 0
         - enable     
         - show version
         - conf t

@@ -1,0 +1,70 @@
+---
+- name: Configure Cisco IOU
+  hosts: r1_r3
+  gather_facts: False
+  tasks:
+    - name: Bypass Prompts
+      debug:
+        msg: '{{inventory_hostname}}: {{ansible_host}} {{ansible_port}}'
+    - name: 
+      shell: |
+        set timeout 5
+        
+        spawn telnet {{ansible_host}} {{ansible_port}}
+
+        expect "Escape character is '^]'."
+        send "\n\n\n"
+    
+        expect "Router>"
+        send "\nno\nno\nno\n"
+
+      args:
+        executable: /usr/bin/expect
+      changed_when: yes
+      delegate_to: localhost
+- name: Configure Cisco IOU
+  hosts: pcs
+  gather_facts: False
+  tasks:
+    - name: Bypass Prompts
+      debug:
+        msg: '{{inventory_hostname}}: {{ansible_host}} {{ansible_port}}'
+    - name: 
+      shell: |
+        set timeout 5
+        
+        spawn telnet {{ansible_host}} {{ansible_port}}
+
+        expect "Escape character is '^]'."
+        send "\n\n\n"
+    
+        expect "Router>"
+        send "no\n\n"
+
+      args:
+        executable: /usr/bin/expect
+      changed_when: yes
+      delegate_to: localhost
+- name: Configure Cisco IOU
+  hosts: r2
+  gather_facts: False
+  tasks:
+    - name: Bypass Prompts
+      debug:
+        msg: '{{inventory_hostname}}: {{ansible_host}} {{ansible_port}}'
+    - name: 
+      shell: |
+        set timeout 5
+        
+        spawn telnet {{ansible_host}} {{ansible_port}}
+
+        expect "Escape character is '^]'."
+        send "\n\n\n"
+    
+        expect "Router>"
+        send "no\n\n"
+
+      args:
+        executable: /usr/bin/expect
+      changed_when: yes
+      delegate_to: localhost
