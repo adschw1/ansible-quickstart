@@ -198,8 +198,8 @@ Example of a ``.ini` inventory:
     R1 ansible_host=192.168.1.10 ansible_port=2001
     R2 ansible_host=192.168.1.20 ansible_port=2002
     [routers:vars]
-    user=cisco
-    passwd=admin
+    ansible_user=cisco
+    ansible_password=admin
 
 Example of a ``.yml`` or ``.yaml`` inventory:
 
@@ -213,6 +213,9 @@ Example of a ``.yml`` or ``.yaml`` inventory:
           R2:  
             ansible_host: 10.110.20.94    
             ansible_port: 2002
+      vars:
+        ansible_user: cisco
+        ansible_password: admin
 
 
 
@@ -282,35 +285,31 @@ Example of using a bash shell and expect script to create a Telnet session into 
 
 .. code-block:: yaml
 
-    ---
-    - name: Configure Cisco IOU
-      hosts: routers
-      gather_facts: False
-      tasks:
-        - debug:
-            msg: '{{ansible_host}} {{ansible_port}}'
-        - name: Configure Devices
-          shell: |
-            set timeout 120
-            spawn telnet {{ansible_host}} {{ansible_port}}
+  # poc_playbook.yml
+  ---
+  - name: Configure Cisco IOU
+    hosts: routers
+    gather_facts: False
+    tasks:
+      - name: Now Configuring
+        debug:
+          msg: '{{inventory_hostname}}: {{ansible_host}} {{ansible_port}}'
+      - name: 
+        shell: |
+          set timeout 5
+          
+          spawn telnet {{ansible_host}} {{ansible_port}}
 
-            expect "Escape character is '^]'."
-            send "\n"        
-            spawn telnet {{ansible_host}} {{ansible_port}}
+          expect "Escape character is '^]'."
+          send "\n\n\n"
+      
+          expect "Router>"
+          send "\nterm length 0\nen\nconf t\nhost {{inventory_hostname}}\n"
 
-            expect "Router>"
-            send "\nterm length 0"
-
-            expect "Router>"
-            send "\nen"
-
-            expect "Router#"        
-            send "\nconf t\nhost {{inventory_hostname}}\nend\nwr"      
-
-          args:
-            executable: /usr/bin/expect
-          changed_when: yes
-          delegate_to: localhost
+            args:
+              executable: /usr/bin/expect
+            changed_when: yes
+            delegate_to: localhost
 
 Now right away you may notice this doesn't look very pratical, and you would be right, but who in their right mind would ever configure emulated devices through Ansible anyways?
 
@@ -320,7 +319,7 @@ Generate Config Files through Templates
 Template File Structure for Jinja
 ---------------------------------
 
-File Structure (directories end with ``/``)::
+File Structure::
 
   templates/
   ├── roles/
